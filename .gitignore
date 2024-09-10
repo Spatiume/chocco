@@ -1,0 +1,6 @@
+.vscode/
+.sass-cache/
+prepros.config
+css/main.map.css
+node_modules
+img/temporarily

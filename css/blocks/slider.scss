@@ -1,0 +1,60 @@
+.slider {
+  background: #f8faf9;
+}
+
+.slider__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.slider__decoration{
+  display: block;
+
+  .ornament{
+    bottom: -20%;
+    right: -44%;
+    height: 54%;
+  }
+
+  .berry3{
+    bottom: -11%;
+    right: -7%;
+  }
+}
+
+.slidermenu {
+  padding-top: 2%;
+  padding-bottom: 8%;
+  position: relative;
+}
+
+.slidermenu__item {
+  padding: 0 0;
+}
+
+.slidermenu__arrow {
+  display: block;
+  width: 15px;
+  height: 30px;
+  position: absolute;
+  top: 48%;
+
+
+
+  &-icon {
+    fill: $black;
+  }
+
+  &-prev {
+    transform: rotate(180deg);
+    left: -3%;
+  }
+
+  &-next {
+    // transform: rotate(180deg);
+    right: -3%;
+  }
+
+}

@@ -1,0 +1,35 @@
+.order-section {
+  background: url('./../img/bg/order-section.jpg') center center / cover no-repeat;
+}
+
+.order-section__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.order-section__title {
+  padding-top: 7.75%;
+  padding-bottom: 4.5%;
+  color: $green;
+}
+
+.order-section__order {
+  padding-bottom: 8.5%;
+}
+
+.order-section__decoration {
+  display: block;
+
+  .leaf6 {
+    bottom: 13%;
+    right: -8%;
+  }
+
+  .berry7 {
+    bottom: 13%;
+    left: -6.5%;
+  }
+}

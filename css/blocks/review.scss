@@ -1,0 +1,42 @@
+.review {
+  background: $grey;
+  display: flex;
+
+  padding: 5% 15% 5% 5%;
+  justify-content: space-between;
+  position: relative;
+}
+
+.review__left {
+  width: 33%;
+}
+
+.review__right {
+  width: 64%;
+  padding-top: 1.5%;
+}
+
+.review__title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 3.5%;
+}
+
+.review__text {
+  color: #666;
+  margin-bottom: 5%;
+}
+
+.review__author{
+  font-weight: 500;
+}
+
+.review__decoration{
+  display: block;
+
+  .tree{
+    width: 20%;
+    right: 0;
+    top: 0;
+  }
+}

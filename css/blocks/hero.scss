@@ -1,0 +1,101 @@
+.hero {
+  background: url(./../img/bg/1.png) center center / cover no-repeat;
+  color: $white;
+  flex: 1;
+}
+
+.hero__container {
+  position: relative;
+  height: 100%;
+}
+
+.hero__content {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hero__right {
+  width: 70%;
+  margin-right: -20%;
+  position: relative;
+}
+
+.hero__img {
+  padding-bottom: 8%;
+  padding-left: 3%;
+}
+
+
+.hero__left {
+  display: flex;
+  position: relative;
+  width: 50%;
+  padding-bottom: 8.5%;
+  flex-direction: column;
+}
+
+
+.hero__desc {
+  width: 75%;
+  margin-bottom: 32px;
+}
+
+.hero__btn {
+  margin-bottom: 20px;
+}
+
+
+
+.hero__title {
+  margin-bottom: 8px;
+}
+
+.hero__info {
+  position: absolute;
+  bottom: -15%;
+}
+
+
+.hero__img-decoration {
+
+  .leaf1 {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+  }
+
+  .leaf2 {
+    position: absolute;
+    bottom: -6%;
+    left: 18%;
+
+  }
+
+
+  .berry1 {
+    position: absolute;
+    bottom: 5.5%;
+    left: 11%;
+  }
+
+
+}
+
+
+.hero__decoration {
+  display: block;
+
+  .leaf3 {
+    bottom: -8%;
+    left: -5%;
+  }
+
+  .berry2 {
+    bottom: -7%;
+    right: 1%;
+  }
+
+}

@@ -1,0 +1,44 @@
+.footer {
+  flex: 0;
+  background-color: $white;
+  padding: 2.25% 7%;
+}
+
+.footer__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__left-col,
+.footer__right-col {
+  width: 50%;
+}
+
+.footer__right-col {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer__contacts {
+  font-size: 21px;
+
+  .footer__adress {
+    font-weight: normal;
+    font-style: normal;
+    color: #000;
+    margin-bottom: 6px;
+  }
+
+  .footer__phone {
+
+    .phone__link {
+      font-size: 18px;
+      color: $green;
+    }
+
+    .icon__phone {
+      fill: $green;
+    }
+  }
+}

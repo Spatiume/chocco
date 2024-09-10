@@ -1,0 +1,36 @@
+.work {
+  background: #f8faf9;
+}
+
+.work__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.work__content {
+  padding: 4% 0;
+}
+
+
+.work__decoration {
+  display: block;
+
+  .leaf4 {
+    top: 14%;
+    right: 3%;
+  }
+
+  .leaf5 {
+    bottom: 9%;
+    left: 0%;
+  }
+
+  .leaf7 {
+    bottom: -15.5%;
+    right: -13.5%;
+  }
+
+}

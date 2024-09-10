@@ -1,0 +1,28 @@
+.advantages__list {
+  display: flex;
+  font-size: 14px;
+}
+
+
+.advantages__item {
+  display: flex;
+  font-size: 16px;
+  line-height: 1.2;
+  padding: 2% 2%;
+
+
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.advantages__img-icon {
+  width: 46px;
+  height: 40px;
+  margin-right: 6px;
+}

@@ -1,0 +1,35 @@
+.reviews__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviews__title {
+  padding-bottom: 3.5%;
+}
+
+.reviews__list {
+  margin-bottom: 1.5%;
+}
+
+.reviews__decoration {
+  display: block;
+
+  .berry5 {
+    right: -7%;
+    top: 5%;
+  }
+
+  .berry6 {
+    left: -8%;
+    bottom: -12.5%;
+  }
+  .ornament{
+    width: 400px;
+    left: -23%;
+    bottom: -9%;
+    transform: rotate(215deg);
+
+  }
+}

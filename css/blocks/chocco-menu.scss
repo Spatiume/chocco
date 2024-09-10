@@ -1,0 +1,100 @@
+.chocco-menu {
+  height: 100%;
+}
+
+.chocco-menu__list {
+  display: flex;
+  height: 100%;
+}
+
+.chocco-menu__item {
+  display: flex;
+  position: relative;
+  flex: 0;
+}
+
+.chocco-menu__trigger--clone {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+
+.chocco-menu__trigger {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 63px;
+  width: 100px;
+  height: 100%;
+  text-decoration: none;
+}
+
+.chocco-menu__title {
+  font-size: 48px;
+  font-weight: 700;
+  white-space: nowrap;
+  transform: rotate(270deg);
+}
+
+.chocco-menu__content {
+  width: 0;
+  padding: 0;
+  transition: 0.7s;
+  overflow: hidden;
+
+  background-color: $dark-grey;
+  font-size: 16px;
+  line-height: 1.49;
+  background-color: rgb(43 42 42 / 89%);
+}
+
+.chocco-menu__milk {
+  background: url(./../img/menu/menu1.jpg) center center / cover no-repeat;
+}
+
+.chocco-menu__honey {
+  background: url(./../img/menu/menu2.jpg) center center / cover no-repeat;
+}
+
+.chocco-menu__berries {
+  background: url(./../img/menu/menu3.jpg) center center / cover no-repeat;
+}
+
+.chocco-menu__trigger--clone {
+  display: none;
+}
+
+.chocho-menu__btn {
+  display: none;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 24px;
+  right: 30px;
+
+  .closebtn{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.chocco-menu__item--active {
+  flex: 1;
+  width: 100%;
+
+  .chocho-menu__btn {
+    display: block;
+  }
+
+  .chocco-menu__content {
+    width: 100%;
+    padding: 7.5% 18% 10% 4.5%;
+  }
+
+  .chocco-menu__trigger--clone {
+    display: flex;
+  }
+}
+

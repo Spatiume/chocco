@@ -1,0 +1,178 @@
+.delicacy {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delicacy__left-col,
+.delicacy__right-col {
+  width: 50%;
+  position: relative;
+}
+
+.delicacy__left-col {
+  padding-left: 6%;
+  padding-top: 3%;
+  padding-bottom: 4%;
+}
+
+.delicacy__right-col {
+
+  padding-left: 7%;
+  padding-top: 13%;
+  padding-right: 4%;
+}
+
+
+.delicacy__compound {
+  position: absolute;
+  top: 0;
+  left: 15%;
+  width: 90px;
+  height: 90px;
+  background-color: $blue;
+  color: $white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+
+.delicacy__title {
+  margin-bottom: 10px;
+  font-size: 36px;
+  font-weight: 800;
+  text-align: left;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.delicacy__text {
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 36px;
+}
+
+.delicacy__info {
+  display: flex;
+}
+
+.delicacy__info-block {
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+  margin-right: 52px;
+  margin-bottom: 18px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  .delicacy__info-title {
+    color: #666;
+    font-weight: 500;
+  }
+
+  .delicacy__info-weight {
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+
+}
+
+.delicacy__btns {
+  display: flex;
+  font-size: 64px;
+  align-items: center;
+}
+
+.delicacy__price {
+  margin-right: 30px;
+}
+
+.delicacy__btn {
+  padding: 5% 11%;
+  background-color: $green;
+  color: $white;
+  border: none;
+}
+
+.compound {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  .compound__list {
+    display: none;
+  }
+
+  &:hover {
+    .compound__list {
+      display: block;
+    }
+  }
+}
+
+
+.delicacy__img-decoration {
+
+
+  .leaf3 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  .leaf4 {
+    position: absolute;
+    left: 0%;
+    top: 30%;
+
+  }
+}
+
+
+.compound__img {
+  width: 51px;
+  height: 51px;
+}
+
+.compound__title {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.compound__list {
+  position: absolute;
+  width: 270px;
+  color: black;
+  border: 1px solid $blue;
+  border-radius: 5px;
+  top: 0;
+  left: 99%;
+  padding: 25%;
+  padding-left: 34%;
+  padding-right: 15%;
+  background-color: $white;
+}
+
+.compound__item {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 6.5%;
+}
+
+.compound__icon {
+  width: 35px;
+  margin-right: 24px;
+}
+
+.compound__weight {
+  margin-left: auto;
+}

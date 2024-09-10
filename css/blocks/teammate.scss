@@ -1,0 +1,51 @@
+.teammate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 240px;
+}
+
+.teammate__img-wrapper {
+  margin-bottom: 21px;
+}
+
+.teammate__name {
+  font-size: 21px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+
+  &::before {
+    content: '\25BC';
+    display: inline-block;
+    order: 10;
+    font-size: 14px;
+  }
+
+  &::after {
+    display: none;
+  }
+}
+
+.teammate__name--active {
+  &::before {
+    display: none;
+  }
+
+  &::after {
+    content: '\25B2';
+    display: inline-block;
+    font-size: 14px;
+  }
+}
+
+
+.teammate__prof {
+  margin-bottom: 1px;
+}
+
+.teammate__info {
+  text-align: center;
+  color: #666666;
+}
