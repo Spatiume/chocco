@@ -12,12 +12,12 @@
 .reviews__list {
   margin-bottom: 1.5%;
 
-  @include tablets{
+  @include tablets {
     height: 65%;
   }
 }
 
-.reviews__item{
+.reviews__item {
   height: 100%;
 }
 
@@ -29,12 +29,25 @@
     top: -2%;
     width: 16%;
     transform: translate(50%, 50%);
+
+    @include tablets {
+      right: 2%;
+      top: -4%;
+      width: auto;
+      height: 10%;
+    }
   }
 
   .berry6 {
     left: -1%;
     bottom: 2%;
     width: 15%;
+
+    @include tablets {
+      width: auto;
+      height: 16%;
+      left: 5%;
+    }
   }
 
 
@@ -44,7 +57,8 @@
     width: auto;
     height: 100%;
     transform: translate(100%, 0%);
-    @include phones{
+
+    @include phones {
       display: none;
     }
   }

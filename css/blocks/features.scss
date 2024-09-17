@@ -96,6 +96,11 @@
     bottom: 1%;
     left: -6%;
     width: 28%;
+
+    @include tablets{
+      width: auto;
+      height: 21%;
+    }
   }
 
 

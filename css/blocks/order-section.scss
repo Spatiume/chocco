@@ -16,7 +16,7 @@
   color: $green;
   text-align: center;
 
-  @include tablets{
+  @include tablets {
     padding: 2% 0%;
 
   }
@@ -34,11 +34,25 @@
     right: -1%;
     width: 14%;
     transform: translate(50%, 50%);
+
+    @include tablets {
+      bottom: 9%;
+      right: 0%;
+      width: auto;
+      height: 12%;
+    }
   }
 
   .berry7 {
     bottom: 17%;
     left: -4.5%;
     width: 5%;
+
+    @include tablets {
+      bottom: 20%;
+      left: -2%;
+      width: auto;
+      height: 5%;
+    }
   }
 }

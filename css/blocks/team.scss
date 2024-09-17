@@ -42,6 +42,11 @@
     left: 0%;
     bottom: 2%;
     width: 11%;
+
+    @include tablets{
+      width: auto;
+      height: 10%;
+    }
   }
 
   .ornament{

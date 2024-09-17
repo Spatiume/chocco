@@ -8,14 +8,6 @@
   }
 }
 
-.menu-section--filter {
-  // background-color: black;
-  // opacity: 0.33;
-  z-index: 100;
-  width: 100%;
-  height: 100%;
-
-}
 
 .menu-section__container {
   position: relative;
@@ -24,6 +16,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  z-index: 10;
 
   @include tablets{
     width: 100%;

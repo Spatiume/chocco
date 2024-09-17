@@ -14,10 +14,19 @@
   display: block;
 
 
+
   .berry3 {
+    transform: translate(50%, 50%);
     bottom: -3%;
     right: -13%;
     width: 14%;
+
+    @include tablets {
+      width: auto;
+      height: 11%;
+      bottom: 0;
+      right: -1%;
+    }
   }
 }
 

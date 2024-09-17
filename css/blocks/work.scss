@@ -23,12 +23,22 @@
     right: 8%;
     width: 10%;
     transform: translate(50%, 50%);
+
+    @include tablets {
+      width: auto;
+      height: 8%;
+    }
   }
 
   .leaf5 {
     bottom: 19%;
     left: 4%;
     width: 8%;
+
+    @include tablets {
+      width: auto;
+      height: 8%;
+    }
   }
 
   .leaf7 {
@@ -36,6 +46,13 @@
     right: -1%;
     transform: translate(50%, 50%);
     width: 26%;
+
+    @include tablets {
+      bottom: 0;
+      right: 0;
+      width: auto;
+      height: 19%;
+    }
   }
 
 }
