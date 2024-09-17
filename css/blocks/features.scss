@@ -61,23 +61,25 @@
   display: block;
 
   .leafpattern {
-    width: 400px;
-    height: 478px;
-    top: -6%;
-    left: -34%;
-    transform: rotate(28deg);
+    width: 45%;
+    top: 0;
+    left: -10%;
+    transform: translate(-50%, 0%)
   }
 
-  .leafpattern-reverse {
-    width: 400px;
-    height: 478px;
-    top: 48%;
-    right: -41%;
-    transform: rotate(180deg);
-  }
 
   .raspberry {
-    bottom: -16.5%;
-    left: -19.5%;
+    bottom: 1%;
+    left: -6%;
+    width: 28%;
+  }
+
+
+  .ornament {
+    bottom: 15%;
+    right: 1%;
+    width: auto;
+    height: 70%;
+    transform: translate(100%, 0%);
   }
 }

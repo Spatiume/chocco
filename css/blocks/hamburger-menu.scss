@@ -1,0 +1,41 @@
+.hamburger-menu {
+  height: 22px;
+  width: 24px;
+  position: relative;
+  margin-left: 5%;
+  cursor: pointer;
+  align-items: center;
+  display: none;
+
+  @include tablets{
+    display: flex;
+  }
+}
+
+.hamburger-menu__bars {
+
+  background-color: white;
+  width: 24px;
+  height: 4px;
+  border-radius: 2px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    background: #fff;
+    width: 24px;
+    height: 4px;
+    border-radius: 2px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    background: #fff;
+    width: 24px;
+    height: 4px;
+    border-radius: 2px;
+  }
+}

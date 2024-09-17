@@ -27,8 +27,8 @@
   position: absolute;
   top: 0;
   left: 15%;
-  width: 90px;
-  height: 90px;
+  width: rem(90px);
+  height: rem(90px);
   background-color: $blue;
   color: $white;
   border-radius: 5px;
@@ -41,8 +41,8 @@
 
 
 .delicacy__title {
-  margin-bottom: 10px;
-  font-size: 36px;
+  margin-bottom: rem(10px);
+  font-size: rem(36px);
   font-weight: 800;
   text-align: left;
   color: #000;
@@ -52,7 +52,7 @@
 .delicacy__text {
   font-weight: 500;
   color: #666;
-  margin-bottom: 36px;
+  margin-bottom: rem(36px);
 }
 
 .delicacy__info {
@@ -62,9 +62,9 @@
 .delicacy__info-block {
   display: flex;
   flex-direction: column;
-  font-size: 22px;
-  margin-right: 52px;
-  margin-bottom: 18px;
+  font-size: rem(22px);
+  margin-right: rem(52px);
+  margin-bottom: rem(18px);
 
   &:last-child {
     margin-right: 0;
@@ -77,7 +77,7 @@
 
   .delicacy__info-weight {
     font-weight: 600;
-    font-size: 22px;
+    font-size: rem(22px);
   }
 
 
@@ -85,12 +85,12 @@
 
 .delicacy__btns {
   display: flex;
-  font-size: 64px;
+  font-size: rem(64px);
   align-items: center;
 }
 
 .delicacy__price {
-  margin-right: 30px;
+  margin-right: rem(30px);
 }
 
 .delicacy__btn {
@@ -136,19 +136,19 @@
 
 
 .compound__img {
-  width: 51px;
-  height: 51px;
+  width: rem(51px);
+  height: rem(51px);
 }
 
 .compound__title {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: bold;
 }
 
 .compound__list {
   position: absolute;
-  width: 270px;
+  width: rem(270px);
   color: black;
   border: 1px solid $blue;
   border-radius: 5px;
@@ -163,14 +163,14 @@
 .compound__item {
   display: flex;
   align-items: center;
-  font-size: 16px;
+  font-size: rem(16px);
   font-weight: 500;
   margin-bottom: 6.5%;
 }
 
 .compound__icon {
-  width: 35px;
-  margin-right: 24px;
+  width: rem(35px);
+  margin-right: rem(24px);
 }
 
 .compound__weight {

@@ -1,7 +1,28 @@
-.header{
+.header {
   display: flex;
-  margin-top: 24px;
+  padding-top: 2.5%;
   justify-content: space-between;
   align-items: center;
+  height: 10%;
+
+  
+
+  @include tablets {
+    padding-top: 5.5%;
+  }
 }
 
+.header__menu {
+  flex: 1;
+  padding: 0 4.5%;
+
+  @include tablets {
+    display: none;
+  }
+}
+
+.header__phone {
+  @include tablets {
+    display: none;
+  }
+}

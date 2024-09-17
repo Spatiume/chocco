@@ -1,5 +1,5 @@
 .hero {
-  background: url(./../img/bg/1.png) center center / cover no-repeat;
+  background: $blue;
   color: $white;
   flex: 1;
 }
@@ -10,37 +10,146 @@
 }
 
 .hero__content {
+  height: 90%;
   display: flex;
   flex: 1;
   justify-content: center;
   align-items: center;
+
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 
 .hero__right {
   width: 70%;
   margin-right: -20%;
+  padding-right: 20%;
   position: relative;
+
+  @include tablets {
+    order: -10;
+    margin-right: 0;
+    height: 50%;
+    width: auto;
+    padding: 0% 14%;
+  }
+
 }
 
-.hero__img {
-  padding-bottom: 8%;
-  padding-left: 3%;
+
+.hero__img-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+
 }
+
+
+.hero__img-wrapper {
+
+  .leaf1 {
+    position: absolute;
+    top: 43%;
+    left: 58%;
+    width: 46%;
+  }
+
+  .leaf2 {
+    position: absolute;
+    bottom: 1%;
+    left: 47%;
+    width: 26%;
+  }
+
+
+  .berry1 {
+    position: absolute;
+    transform: rotate(69deg);
+
+    bottom: 23.5%;
+    left: 16%;
+    width: 50%;
+  }
+
+  .berry2 {
+    position: absolute;
+
+    bottom: 2%;
+    right: 0%;
+    width: 21%;
+
+  }
+
+
+
+  .leaf3 {
+    position: absolute;
+    top: 58%;
+    left: -1%;
+    width: 12%;
+  }
+
+}
+
+.hero__right-decoration {
+  .uzor {
+    position: absolute;
+    bottom: 0%;
+    z-index: -10;
+
+    right: -9%;
+    bottom: 0%;
+    max-height: inherit;
+    height: 100%;
+
+    @include tablets {
+      bottom: 41%;
+      height: 68%;
+    }
+  }
+}
+
 
 
 .hero__left {
   display: flex;
   position: relative;
   width: 50%;
-  padding-bottom: 8.5%;
+  padding-bottom: 7.5%;
   flex-direction: column;
+
+  @include tablets {
+    width: 100%;
+    height: 50%;
+    order: 0;
+    text-align: center;
+    padding-bottom: none;
+    padding: 2% 16%;
+
+
+    .hero__title,
+    .hero__desc {
+      text-align: center;
+      line-height: 1;
+      margin-bottom: 3%;
+    }
+
+  }
 }
 
 
 .hero__desc {
   width: 75%;
-  margin-bottom: 32px;
+  margin-bottom: 6%;
+  text-align: left;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .hero__btn {
@@ -50,52 +159,27 @@
 
 
 .hero__title {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
+
 }
 
 .hero__info {
   position: absolute;
-  bottom: -15%;
+  bottom: -16%;
+
+  @include tablets {
+    display: none;
+  }
 }
 
-
-.hero__img-decoration {
-
-  .leaf1 {
-    position: absolute;
-    top: 50%;
-    left: 45%;
-  }
-
-  .leaf2 {
-    position: absolute;
-    bottom: -6%;
-    left: 18%;
-
-  }
-
-
-  .berry1 {
-    position: absolute;
-    bottom: 5.5%;
-    left: 11%;
-  }
-
-
-}
 
 
 .hero__decoration {
   display: block;
 
   .leaf3 {
-    bottom: -8%;
-    left: -5%;
+    bottom: 0%;
+    left: -3%;
+    width: 6.5%;
   }
-
-  .berry2 {
-    bottom: -7%;
-    right: 1%;
-  }
-
 }

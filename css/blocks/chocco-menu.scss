@@ -25,17 +25,19 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: 63px;
-  width: 100px;
+  width: rem(100px);
   height: 100%;
   text-decoration: none;
+  padding-bottom: 64px;
+
 }
 
 .chocco-menu__title {
-  font-size: 48px;
+  font-size: rem(48px);
   font-weight: 700;
   white-space: nowrap;
   transform: rotate(270deg);
+
 }
 
 .chocco-menu__content {
@@ -45,7 +47,7 @@
   overflow: hidden;
 
   background-color: $dark-grey;
-  font-size: 16px;
+  font-size: rem(16px);
   line-height: 1.49;
   background-color: rgb(43 42 42 / 89%);
 }

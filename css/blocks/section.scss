@@ -1,7 +1,7 @@
 .section {
   display: flex;
   flex-direction: column;
-  min-width: 650px;
+  // min-width: 650px;
   height: 100vh;
 
 }
@@ -9,7 +9,7 @@
 .section__title {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 46px;
+  font-size: rem(46px);
   letter-spacing: 1px;
   text-align: left;
   line-height: normal;

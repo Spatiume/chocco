@@ -4,6 +4,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  @include tablets {}
 }
 
 .team__title {
@@ -13,13 +15,39 @@
 .team__list {
   display: flex;
   padding: 2% 0% 1%;
+  justify-content: space-between;
+
+  @include tablets {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.team__item {
+  width: 20%;
+
+  @include tablets {
+    margin-bottom: 5%;
+    width: 100%;
+  }
 }
 
 .team__decoration {
   display: block;
 
   .berry4 {
-    left: -5%;
-    bottom: -7%;
+    left: 0%;
+    bottom: 2%;
+    width: 11%;
   }
+
+  .ornament{
+    bottom: 15%;
+    right: 0%;
+    width: auto;
+    height: 70%;
+    transform: translate(100%, 0%);
+  }
+
 }

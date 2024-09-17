@@ -1,5 +1,5 @@
 //colors
-$blue: #86c3d7;
+$blue: #61C4D9;
 $green: #365a49;
 $grey: #f8faf9;
 $dark-grey: #333537;
@@ -14,9 +14,10 @@ $z-fixed-menu: 100;
 @import "_misc/normalize.scss";
 
 // setups
-@import "_misc/mixins";
-@import "_misc/fonts";
-@import "_misc/layout";
+@import "_misc/media.scss";
+@import "_misc/mixins.scss";
+@import "_misc/fonts.scss";
+@import "_misc/layout.scss";
 
 //components
 
@@ -24,6 +25,7 @@ $z-fixed-menu: 100;
 @import "./blocks/section.scss";
 @import "./blocks/bg-decoration.scss";
 @import "./blocks/header.scss";
+@import "./blocks/hamburger-menu.scss";
 @import "./blocks/logo.scss";
 @import "./blocks/icon.scss";
 @import "./blocks/menu.scss";

@@ -19,18 +19,23 @@
   display: block;
 
   .leaf4 {
-    top: 14%;
-    right: 3%;
+    top: 7%;
+    right: 8%;
+    width: 10%;
+    transform: translate(50%, 50%);
   }
 
   .leaf5 {
-    bottom: 9%;
-    left: 0%;
+    bottom: 19%;
+    left: 4%;
+    width: 8%;
   }
 
   .leaf7 {
-    bottom: -15.5%;
-    right: -13.5%;
+    bottom: 4%;
+    right: -1%;
+    transform: translate(50%, 50%);
+    width: 26%;
   }
 
 }

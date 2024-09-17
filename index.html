@@ -17,44 +17,53 @@
       <div class="container hero__container">
         <header class="header">
           <a href="index.html" class="header__logo logo">
-            <svg class="icon icon__logo">
-              <use xlink:href="/icons/sprite.svg#logo"></use>
-            </svg>
+            <img src="./img/logo.png" alt="logo" class="logo__img">
           </a>
-
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a href="#" class="menu__link">О нас</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__link">Батончики</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__link">Команда</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__link">Меню</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__link">Отзывы</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__link">Как мы работаем</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="header__phone phone">
-            <div class="phone__icon">
-              <svg class="icon icon__phone">
-                <use xlink:href="./icons/sprite.svg#phone"></use>
-              </svg>
-            </div>
-            <a href="tel:+88009039090" class="phone__link">8 800 903 90 90</a>
+          <div class="header__menu">
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="#" class="menu__link">О нас</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Батончики</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Команда</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Меню</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Отзывы</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Как мы работаем</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#" class="menu__link">Контакты</a>
+                </li>
+              </ul>
+            </nav>
           </div>
+
+          <div class="header__phone">
+            <div class="phone">
+              <div class="phone__icon">
+
+                <svg class="icon icon__phone">
+                  <use xlink:href="./icons/sprite.svg#phone"></use>
+                </svg>
+              </div>
+              <a href="tel:+88009039090" class="phone__link">8 800 903 90 90</a>
+            </div>
+          </div>
+          <div class="header__hamburger">
+            <a class="hamburger-menu">
+              <div class="hamburger-menu__bars"></div>
+            </a>
+          </div>
+
         </header>
         <div class="hero__content">
           <div class="hero__left">
@@ -94,17 +103,22 @@
             </div>
           </div>
           <div class="hero__right">
-            <img src="./img/content/bars.png" alt="Батончик" class="hero__img">
-            <div class="hero__img-decoration">
-              <img src="./img/content-decoration/leaf1.png" alt="лист" class="leaf1">
-              <img src="./img/content-decoration/leaf2.png" alt="лист" class="leaf2">
-              <img src="./img/content-decoration/berry1.png" alt="ягода" class="berry1">
+            <div class="hero__img-wrapper">
+              <img src="./img/content/bars.png" alt="Батончик" class="hero__img">
+              <img src="./img/content-decoration/leaf1.png" alt="лист" class="leaf1 img-decoration">
+              <img src="./img/content-decoration/leaf2.png" alt="лист" class="leaf2 img-decoration">
+              <img src="./img/content-decoration/berry1.png" alt="ягода" class="berry1 img-decoration">
+              <img src="./img/bg-decoration/berry2.png" alt="ягода" class="berry2 img-decoration">
+              <img src="./img/bg-decoration/leaf3.png" alt="лист" class="leaf3 img-decoration">
             </div>
+            
+          </div>
+          <div class="hero__right-decoration">
+            <img src="./img/bg-decoration/uzor.png" alt="узор-лист" class="uzor img-decoration">
           </div>
         </div>
         <div class="hero__decoration bg-decoration">
-          <img src="./img/bg-decoration/berry2.png" alt="ягода" class="berry2">
-          <img src="./img/bg-decoration/leaf3.png" alt="лист" class="leaf3">
+          <img src="./img/bg-decoration/leaf3.png" alt="лист" class="leaf3 img-decoration">
         </div>
       </div>
 
@@ -178,10 +192,9 @@
           </li>
         </ul>
         <div class="features__decoration bg-decoration">
-          <img src="./img/bg-decoration/leaf-pattern.png" alt="узор лист" class="leafpattern">
-          <img src="./img/bg-decoration/leaf-pattern.png" alt="узор лист" class="leafpattern-reverse">
+          <img src="./img/bg-decoration/raspberry.png" alt="малина" class="raspberry img-decoration">
+          <img src="./img/bg-decoration/ornament_1.png" alt="орнамент" class="ornament img-decoration">
 
-          <img src="./img/bg-decoration/raspberry.png" alt="малина" class="raspberry">
         </div>
 
       </div>
@@ -295,8 +308,7 @@
           </ul>
         </div>
         <div class="slider__decoration bg-decoration">
-          <img src="./img/bg-decoration/ornamen-bunga.png" alt="орнамент" class="ornament">
-          <img src="./img/bg-decoration/berry3.png" alt="ягоды" class="berry3">
+          <img src="./img/bg-decoration/berry3.png" alt="ягоды" class="berry3 img-decoration">
         </div>
       </div>
 
@@ -305,8 +317,8 @@
       <div class="container team__container">
         <h2 class="section__title team__title">Команда</h2>
         <ul class="team__list">
-          <li class="team__item">
-            <article class="teammate">
+          <li class="team__item team__item--active">
+            <article class="teammate teammate--active">
               <div class="teammate__img-wrapper">
                 <img src="./img/teammate/team1.png" alt="член команды" class="teammate__img">
               </div>
@@ -355,7 +367,9 @@
           </li>
         </ul>
         <div class="team__decoration bg-decoration">
-          <img src="./img/bg-decoration/berry4.png" alt="ягода" class="berry4">
+          <img src="./img/bg-decoration/berry4.png" alt="ягода" class="berry4 img-decoration">
+          <img src="./img/bg-decoration/ornament_2.png" alt="орнамент" class="ornament img-decoration">
+
         </div>
       </div>
 
@@ -429,7 +443,7 @@
               </ul>
             </div>
           </div>
-          <div class="menu-section__decoration bg-decoration">
+          <div class="menu-section__decoration">
             <div class="background"></div>
           </div>
         </div>
@@ -459,7 +473,8 @@
 
               </div>
               <div class="review__decoration bg-decoration">
-                <img src="./img/content-decoration/tree.png" alt="дерево" class="tree">
+                <img src="./img/content-decoration/tree.png" alt="дерево" class="tree img-decoration">
+
               </div>
             </div>
           </div>
@@ -486,9 +501,11 @@
           </ul>
         </div>
         <div class="reviews__decoration bg-decoration">
-          <img src="./img/bg-decoration/ornamen-bunga.png" alt="орнамент" class="ornament">
-          <img src="./img/bg-decoration/berry5.png" alt="ягоды" class="berry5">
-          <img src="./img/bg-decoration/berry6.png" alt="ягоды" class="berry6">
+          <img src="./img/bg-decoration/ornament_3.png" alt="орнамент" class="ornament img-decoration">
+          <img src="./img/bg-decoration/ornament_4.png" alt="орнамент" class="ornament-berry img-decoration">
+          <img src="./img/bg-decoration/berry5.png" alt="ягоды" class="berry5 img-decoration">
+          <img src="./img/bg-decoration/berry6.png" alt="ягоды" class="berry6 img-decoration">
+
         </div>
       </div>
     </section>
@@ -500,9 +517,9 @@
           <img src="./img/temporarily/player.png" alt="" class="work__player">
         </div>
         <div class="work__decoration bg-decoration">
-          <img src="./img/bg-decoration/leaf4.png" alt="лист" class="leaf4">
-          <img src="./img/bg-decoration/leaf5.png" alt="лист" class="leaf5">
-          <img src="./img/bg-decoration/leaf7.png" alt="лист" class="leaf7">
+          <img src="./img/bg-decoration/leaf4.png" alt="лист" class="leaf4 img-decoration">
+          <img src="./img/bg-decoration/leaf5.png" alt="лист" class="leaf5 img-decoration">
+          <img src="./img/bg-decoration/leaf7.png" alt="лист" class="leaf7 img-decoration">
         </div>
       </div>
     </section>
@@ -577,8 +594,8 @@
           </div>
         </form>
         <div class="order-section__decoration bg-decoration">
-          <img src="./img/bg-decoration/leaf6.png" alt="лист" class="leaf6">
-          <img src="./img/bg-decoration/berry7.png" alt="лист" class="berry7">
+          <img src="./img/bg-decoration/leaf6.png" alt="лист" class="leaf6 img-decoration">
+          <img src="./img/bg-decoration/berry7.png" alt="лист" class="berry7 img-decoration">
         </div>
       </div>
     </section>

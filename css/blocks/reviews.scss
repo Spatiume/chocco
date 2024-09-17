@@ -17,19 +17,31 @@
   display: block;
 
   .berry5 {
-    right: -7%;
-    top: 5%;
+    right: 1%;
+    top: -2%;
+    width: 16%;
+    transform: translate(50%, 50%);
   }
 
   .berry6 {
-    left: -8%;
-    bottom: -12.5%;
+    left: -1%;
+    bottom: 2%;
+    width: 15%;
   }
-  .ornament{
-    width: 400px;
-    left: -23%;
-    bottom: -9%;
-    transform: rotate(215deg);
 
+
+  .ornament {
+    top: 0%;
+    right: -5%;
+    width: auto;
+    height: 100%;
+    transform: translate(100%, 0%);
   }
+
+  .ornament-berry {
+    bottom: 0;
+    left: -3%;
+    width: 33%;
+  }
+
 }

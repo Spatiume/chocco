@@ -2,11 +2,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 240px;
+  max-width: 240px;
+  width: 100%;
 }
 
 .teammate__img-wrapper {
   margin-bottom: 21px;
+
+  @include tablets{
+    display: none;
+  }
 }
 
 .teammate__name {
@@ -15,6 +20,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 6px;
+  text-align: center;
 
   &::before {
     content: '\25BC';
@@ -28,24 +34,44 @@
   }
 }
 
-.teammate__name--active {
-  &::before {
-    display: none;
-  }
 
-  &::after {
-    content: '\25B2';
-    display: inline-block;
-    font-size: 14px;
-  }
-}
 
 
 .teammate__prof {
+  display: none;
   margin-bottom: 1px;
 }
 
 .teammate__info {
+  display: none;
   text-align: center;
   color: #666666;
+}
+
+.teammate--active{
+
+  .teammate__name{
+    &::before {
+      display: none;
+    }
+  
+    &::after {
+      content: '\25B2';
+      display: inline-block;
+      font-size: 14px;
+    }
+  }
+
+
+  .teammate__info{
+    display: block;
+  }
+
+  .teammate__prof{
+    display: block;
+  }
+
+  .teammate__img-wrapper{
+    display: block;
+  }
 }
