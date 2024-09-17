@@ -10,27 +10,36 @@
 }
 
 .features__content-title {
-  padding: 0% 28% 4%;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-
+  padding-bottom: 4%;
 }
 
 .features__desc {
-  font-size: 18px;
+  font-size: rem(18px);
   text-align: center;
+  padding: 0% 28%;
+
+  @include tablets{
+    padding: 0 10%;
+  }
 }
 
 .features__title {
-  margin-bottom: 9px;
+  margin-bottom: rem(9px);
+  text-wrap: nowrap;
+  font-size: rem(44px);
 }
 
 .features__list {
   display: flex;
   justify-content: space-between;
   padding: 1% 0%;
+
+  @include phones{
+    flex-direction: column;
+  }
 }
 
 .features__item {
@@ -54,7 +63,22 @@
       display: none;
     }
   }
+
+  @include tablets {
+    width: calc(100% / 3 - 20px);
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @include phones {
+    width: 100%;
+    margin-bottom: 2%;
+  }
 }
+
+
 
 
 .features__decoration {
@@ -81,5 +105,9 @@
     width: auto;
     height: 70%;
     transform: translate(100%, 0%);
+
+    @include phones{
+      display: none;
+    }
   }
 }

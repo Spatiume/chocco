@@ -137,7 +137,10 @@
       line-height: 1;
       margin-bottom: 3%;
     }
+  }
 
+  @include phones{
+    padding: 2% 2%;
   }
 }
 

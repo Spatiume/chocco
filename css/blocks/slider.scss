@@ -7,13 +7,14 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  max-width: 980px;
 }
 
-.slider__decoration{
+.slider__decoration {
   display: block;
 
 
-  .berry3{
+  .berry3 {
     bottom: -3%;
     right: -13%;
     width: 14%;
@@ -21,13 +22,22 @@
 }
 
 .slidermenu {
-  padding-top: 2%;
-  padding-bottom: 8%;
   position: relative;
+  padding: 7% 2% 8%;
+  height: 100%;
+
+  @include tablets {
+    padding: 2% 14%;
+  }
+}
+
+.slidermenu__list {
+  height: 100%;
 }
 
 .slidermenu__item {
   padding: 0 0;
+  height: 100%;
 }
 
 .slidermenu__arrow {
@@ -45,12 +55,20 @@
 
   &-prev {
     transform: rotate(180deg);
-    left: -3%;
+    left: 0%;
+
+    @include tablets {
+      left: 7%;
+    }
   }
 
   &-next {
-    // transform: rotate(180deg);
-    right: -3%;
+    right: 0%;
+
+    @include tablets {
+      right: 7%;
+    }
+
   }
 
 }

@@ -111,14 +111,17 @@
               <img src="./img/bg-decoration/berry2.png" alt="ягода" class="berry2 img-decoration">
               <img src="./img/bg-decoration/leaf3.png" alt="лист" class="leaf3 img-decoration">
             </div>
-            
+
           </div>
           <div class="hero__right-decoration">
             <img src="./img/bg-decoration/uzor.png" alt="узор-лист" class="uzor img-decoration">
           </div>
         </div>
         <div class="hero__decoration bg-decoration">
-          <img src="./img/bg-decoration/leaf3.png" alt="лист" class="leaf3 img-decoration">
+          <picture class="leaf3 img-decoration">
+            <source srcset="./img/bg-decoration/leaf3.png">
+            <img src="" alt="лист" class="">
+          </picture>
         </div>
       </div>
 
@@ -192,9 +195,14 @@
           </li>
         </ul>
         <div class="features__decoration bg-decoration">
-          <img src="./img/bg-decoration/raspberry.png" alt="малина" class="raspberry img-decoration">
-          <img src="./img/bg-decoration/ornament_1.png" alt="орнамент" class="ornament img-decoration">
-
+          <picture class="raspberry img-decoration">
+            <source srcset="./img/bg-decoration/raspberry.png">
+            <img src="" alt="малина" class="">
+          </picture>
+          <picture class="ornament img-decoration">
+            <source media="(min-width: 480px)" srcset="./img/bg-decoration/ornament_1.png">
+            <img src="" alt="орнамент" class="">
+          </picture>
         </div>
 
       </div>
@@ -308,7 +316,11 @@
           </ul>
         </div>
         <div class="slider__decoration bg-decoration">
-          <img src="./img/bg-decoration/berry3.png" alt="ягоды" class="berry3 img-decoration">
+          <picture class="berry3 img-decoration">
+            <source srcset="./img/bg-decoration/berry3.png">
+            <img src="" alt="ягоды">
+          </picture>
+
         </div>
       </div>
 
@@ -367,85 +379,88 @@
           </li>
         </ul>
         <div class="team__decoration bg-decoration">
-          <img src="./img/bg-decoration/berry4.png" alt="ягода" class="berry4 img-decoration">
-          <img src="./img/bg-decoration/ornament_2.png" alt="орнамент" class="ornament img-decoration">
-
+          <picture class="berry4 img-decoration">
+            <source media="" srcset="./img/bg-decoration/berry4.png">
+            <img src="" alt="ягода">
+          </picture>
+          <picture class="ornament img-decoration">
+            <source media="(min-width: 480px)" srcset="./img/bg-decoration/ornament_2.png">
+            <img src="" alt="орнамент" class="">
+          </picture>
         </div>
       </div>
 
     </section>
 
     <section class="section menu-section ">
-      <div class="menu-section--filter">
-        <div class="container menu-section__container">
-          <h2 class="section__title menu-section__title">Меню</h2>
-          <div class="menu-section__content">
-            <div class="chocco-menu">
-              <ul class="chocco-menu__list">
-                <li class="chocco-menu__item chocco-menu__item--active">
-                  <a href="#" class="chocco-menu__trigger chocco-menu__milk">
-                    <h4 class="chocco-menu__title">Батончики с молоком</h4>
-                  </a>
-                  <div class="chocco-menu__content">
-                    <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
-                      полезнее.
-                      Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что
-                      можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но
-                      кто
-                      её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.</p>
+      <div class="container menu-section__container">
+        <h2 class="section__title menu-section__title">Меню</h2>
+        <div class="menu-section__content">
+          <div class="chocco-menu">
+            <ul class="chocco-menu__list">
+              <li class="chocco-menu__item chocco-menu__item--active">
+                <a href="#" class="chocco-menu__trigger chocco-menu__milk">
+                  <h4 class="chocco-menu__title">Батончики с молоком</h4>
+                </a>
+                <div class="chocco-menu__content">
+                  <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
+                    полезнее.
+                    Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что
+                    можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но
+                    кто
+                    её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.</p>
+                </div>
+                <div class="chocco-menu__trigger chocco-menu__trigger--clone chocco-menu__milk">
+                  <h4 class="chocco-menu__title">Батончики с молоком</h4>
+                </div>
+                <a href="#" class="chocho-menu__btn">
+                  <div class="closebtn">
+                    <svg class="icon icon__close">
+                      <use xlink:href="./icons/sprite.svg#close"></use>
+                    </svg>
                   </div>
-                  <div class="chocco-menu__trigger chocco-menu__trigger--clone chocco-menu__milk">
-                    <h4 class="chocco-menu__title">Батончики с молоком</h4>
-                  </div>
-                  <a href="#" class="chocho-menu__btn">
-                    <div class="closebtn">
-                      <svg class="icon icon__close">
-                        <use xlink:href="./icons/sprite.svg#close"></use>
-                      </svg>
-                    </div>
-                  </a>
-                </li>
-                <li class="chocco-menu__item">
-                  <a href="#" class="chocco-menu__trigger chocco-menu__honey">
-                    <h4 class="chocco-menu__title">С мёдом и фруктами</h4>
-                  </a>
-                  <div class="chocco-menu__content">
-                    <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
-                      полезнее.
-                      Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что
-                      можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но
-                      кто
-                      её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.</p>
-                  </div>
-                  <div class="chocco-menu__trigger chocco-menu__trigger--clone chocco-menu__honey">
-                    <h4 class="chocco-menu__title">С мёдом и фруктами</h4>
-                  </div>
-                  <a href="#" class="chocho-menu__btn closebtn"></a>
-                </li>
-                <li class="chocco-menu__item ">
-                  <a href="#" class="chocco-menu__trigger chocco-menu__berries">
-                    <h4 class="chocco-menu__title">Дикие ягоды</h4>
-                  </a>
-                  <div class="chocco-menu__content">
-                    <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
-                      полезнее.
-                      Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что
-                      можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но
-                      кто
-                      её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.</p>
-                  </div>
-                  <div class="chocco-menu__trigger chocco-menu__trigger--clone chocco-menu__berries">
-                    <h4 class="chocco-menu__title">Дикие ягоды</h4>
-                  </div>
-                  <a href="#" class="chocho-menu__btn closebtn"></a>
-                </li>
+                </a>
+              </li>
+              <li class="chocco-menu__item">
+                <a href="#" class="chocco-menu__trigger chocco-menu__honey">
+                  <h4 class="chocco-menu__title">С мёдом и фруктами</h4>
+                </a>
+                <div class="chocco-menu__content">
+                  <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
+                    полезнее.
+                    Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что
+                    можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но
+                    кто
+                    её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.</p>
+                </div>
+                <div class="chocco-menu__trigger chocco-menu__trigger--clone chocco-menu__honey">
+                  <h4 class="chocco-menu__title">С мёдом и фруктами</h4>
+                </div>
+                <a href="#" class="chocho-menu__btn closebtn"></a>
+              </li>
+              <li class="chocco-menu__item ">
+                <a href="#" class="chocco-menu__trigger chocco-menu__berries">
+                  <h4 class="chocco-menu__title">Дикие ягоды</h4>
+                </a>
+                <div class="chocco-menu__content">
+                  <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и
+                    полезнее.
+                    Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что
+                    можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но
+                    кто
+                    её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы.</p>
+                </div>
+                <div class="chocco-menu__trigger chocco-menu__trigger--clone chocco-menu__berries">
+                  <h4 class="chocco-menu__title">Дикие ягоды</h4>
+                </div>
+                <a href="#" class="chocho-menu__btn closebtn"></a>
+              </li>
 
-              </ul>
-            </div>
+            </ul>
           </div>
-          <div class="menu-section__decoration">
-            <div class="background"></div>
-          </div>
+        </div>
+        <div class="menu-section__decoration">
+          <div class="background"></div>
         </div>
       </div>
 
@@ -501,11 +516,22 @@
           </ul>
         </div>
         <div class="reviews__decoration bg-decoration">
-          <img src="./img/bg-decoration/ornament_3.png" alt="орнамент" class="ornament img-decoration">
-          <img src="./img/bg-decoration/ornament_4.png" alt="орнамент" class="ornament-berry img-decoration">
-          <img src="./img/bg-decoration/berry5.png" alt="ягоды" class="berry5 img-decoration">
-          <img src="./img/bg-decoration/berry6.png" alt="ягоды" class="berry6 img-decoration">
-
+          <picture class="ornament img-decoration">
+            <source media="(min-width: 480px)" srcset="./img/bg-decoration/ornament_3.png">
+            <img src="" alt="орнамент" class="">
+          </picture>
+          <picture class="ornament-berry img-decoration">
+            <source srcset="./img/bg-decoration/ornament_4.png">
+            <img src="" alt="орнамент" class="">
+          </picture>
+          <picture class="berry5 img-decoration">
+            <source srcset="./img/bg-decoration/berry5.png">
+            <img src="" alt="ягоды" class="">
+          </picture>
+          <picture class="berry6 img-decoration">
+            <source srcset="./img/bg-decoration/berry6.png">
+            <img src="" alt="ягоды" class="">
+          </picture>
         </div>
       </div>
     </section>
@@ -517,9 +543,18 @@
           <img src="./img/temporarily/player.png" alt="" class="work__player">
         </div>
         <div class="work__decoration bg-decoration">
-          <img src="./img/bg-decoration/leaf4.png" alt="лист" class="leaf4 img-decoration">
-          <img src="./img/bg-decoration/leaf5.png" alt="лист" class="leaf5 img-decoration">
-          <img src="./img/bg-decoration/leaf7.png" alt="лист" class="leaf7 img-decoration">
+          <picture class="leaf4 img-decoration">
+            <source media="" srcset="./img/bg-decoration/leaf4.png">
+            <img src="" alt="лист" class="">
+          </picture>
+          <picture class="leaf5 img-decoration">
+            <source media="" srcset="./img/bg-decoration/leaf5.png">
+            <img src="" alt="лист" class="">
+          </picture>
+          <picture class="leaf7 img-decoration">
+            <source media="" srcset="./img/bg-decoration/leaf7.png">
+            <img src="" alt="лист" class="">
+          </picture>
         </div>
       </div>
     </section>

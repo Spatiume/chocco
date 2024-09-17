@@ -1,15 +1,11 @@
-.bg-decoration{
+.bg-decoration {
   display: none;
 
-  *{
-    position: absolute; 
+
+  picture {
+    display: block;
+    position: absolute;
     width: 100%;
     transform: translate(-50%, 50%);
   }
-
 }
-
-
-
-
-

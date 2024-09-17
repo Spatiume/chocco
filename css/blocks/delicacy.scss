@@ -1,25 +1,48 @@
 .delicacy {
   display: flex;
   justify-content: space-between;
+  height: 100%;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .delicacy__left-col,
 .delicacy__right-col {
   width: 50%;
   position: relative;
+
+  @include tablets {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .delicacy__left-col {
   padding-left: 6%;
   padding-top: 3%;
   padding-bottom: 4%;
+  max-height: 50%;
+
+  @include tablets {
+    padding: 0;
+    width: auto;
+  }
 }
 
 .delicacy__right-col {
+  height: 50%;
 
   padding-left: 7%;
-  padding-top: 13%;
+  padding-top: 12%;
   padding-right: 4%;
+
+  @include tablets {
+    padding: 0;
+  }
 }
 
 
@@ -36,35 +59,57 @@
   justify-content: center;
   align-items: center;
 
+  @include tablets {
+    display: none;
+  }
+
 }
 
 
 
 .delicacy__title {
-  margin-bottom: rem(10px);
+  margin-bottom: 4%;
   font-size: rem(36px);
   font-weight: 800;
   text-align: left;
   color: #000;
   text-transform: uppercase;
+
+  @include tablets {
+    text-align: center;
+  }
 }
 
 .delicacy__text {
   font-weight: 500;
   color: #666;
-  margin-bottom: rem(36px);
+  margin-bottom: 10%;
+
+  @include tablets {
+    margin-bottom: 2%;
+  }
 }
 
 .delicacy__info {
   display: flex;
+
+  @include tablets {
+    justify-content: center;
+
+  }
 }
 
 .delicacy__info-block {
   display: flex;
   flex-direction: column;
   font-size: rem(22px);
-  margin-right: rem(52px);
-  margin-bottom: rem(18px);
+
+  margin-right: 14%;
+  margin-bottom: 5%;
+
+  @include tablets{
+    margin-bottom: 2%;
+  }
 
   &:last-child {
     margin-right: 0;
@@ -87,13 +132,20 @@
   display: flex;
   font-size: rem(64px);
   align-items: center;
+
+  @include tablets {
+    text-align: center;
+    justify-content: center;
+  }
 }
 
 .delicacy__price {
-  margin-right: rem(30px);
+  font-size: rem(60px);
+  margin-right: 6%;
 }
 
 .delicacy__btn {
+  word-wrap: nowrap;
   padding: 5% 11%;
   background-color: $green;
   color: $white;
@@ -101,7 +153,6 @@
 }
 
 .compound {
-  display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 
@@ -113,6 +164,20 @@
     .compound__list {
       display: block;
     }
+  }
+}
+
+.delicacy__img-wrapper {
+  width: 100%;
+  position: relative;
+
+  @include tablets {
+    height: 100%;
+  }
+
+  @include phones {
+    display: flex;
+    align-items: flex-end;
   }
 }
 
