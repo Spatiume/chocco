@@ -7,33 +7,64 @@
 .footer__container {
   display: flex;
   flex-direction: row;
+
+  @include tablets{
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .footer__left-col,
 .footer__right-col {
   width: 50%;
+
+  @include tablets{
+    width: 100%;
+  }
+}
+
+.footer__left-col{
+  @include tablets{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+  }
 }
 
 .footer__right-col {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  @include tablets{
+    justify-content: center;
+  }
 }
 
 .footer__contacts {
-  font-size: 21px;
+  font-size: rem(21px);
+  display: flex;
+  flex-direction: column;
+
+  @include tablets{
+    justify-content: center;
+  }
 
   .footer__adress {
     font-weight: normal;
     font-style: normal;
     color: #000;
-    margin-bottom: 6px;
+    margin-bottom: rem(6px);
   }
 
   .footer__phone {
 
+    @include tablets{
+      justify-content: center;
+    }
+
     .phone__link {
-      font-size: 18px;
+      font-size: rem(18px);
       color: $green;
     }
 

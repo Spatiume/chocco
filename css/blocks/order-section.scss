@@ -14,6 +14,12 @@
   padding-top: 7.75%;
   padding-bottom: 4.5%;
   color: $green;
+  text-align: center;
+
+  @include tablets{
+    padding: 2% 0%;
+
+  }
 }
 
 .order-section__order {

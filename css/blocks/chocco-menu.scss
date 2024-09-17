@@ -30,6 +30,13 @@
   text-decoration: none;
   padding-bottom: 64px;
 
+  @include tablets{
+    width: rem(75px);
+  }
+
+  @include phones{
+    width: rem(65px);
+  }
 }
 
 .chocco-menu__title {

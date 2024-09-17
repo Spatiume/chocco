@@ -7,7 +7,7 @@
 }
 
 .teammate__img-wrapper {
-  margin-bottom: 21px;
+  margin-bottom: rem(21px);
 
   @include tablets{
     display: none;
@@ -15,11 +15,11 @@
 }
 
 .teammate__name {
-  font-size: 21px;
+  font-size: rem(21px);
   font-weight: bold;
   display: flex;
   align-items: center;
-  margin-bottom: 6px;
+  margin-bottom: rem(6px);
   text-align: center;
 
   &::before {

@@ -11,6 +11,14 @@
 
 .reviews__list {
   margin-bottom: 1.5%;
+
+  @include tablets{
+    height: 65%;
+  }
+}
+
+.reviews__item{
+  height: 100%;
 }
 
 .reviews__decoration {
@@ -36,6 +44,9 @@
     width: auto;
     height: 100%;
     transform: translate(100%, 0%);
+    @include phones{
+      display: none;
+    }
   }
 
   .ornament-berry {
