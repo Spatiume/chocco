@@ -8,6 +8,7 @@
   justify-content: center;
   position: relative;
   max-width: 980px;
+  height: 100vh;
 }
 
 .slider__decoration {
@@ -34,6 +35,7 @@
   position: relative;
   padding: 7% 2% 8%;
   height: 100%;
+  width: 100%;
 
   @include tablets {
     padding: 2% 14%;
@@ -42,12 +44,50 @@
 
 .slidermenu__list {
   height: 100%;
+  overflow: hidden;
+  position: relative;
+
+  .transition-left {
+    right: 120%;
+  }
+
+  .transition-right {
+    right: -120%;
+  }
+
+  .slidermenu__item--active {
+    right: 0;
+  }
+
+  .prev-right {
+    right: 100%;
+    transition: right 0.8s;
+  }
+
+  .prev-left {
+    right: -100%;
+    transition: right 0.8s;
+  }
 }
 
 .slidermenu__item {
+  position: absolute;
   padding: 0 0;
-  height: 100%;
+  height: 0%;
+  width: 100%;
+  overflow: hidden;
+  right: 0;
+  top: 0;
+  transition: right 0.8s;
+
+  &--active {
+    position: relative;
+    display: flex;
+    height: 100%;
+  }
+
 }
+
 
 .slidermenu__arrow {
   display: block;

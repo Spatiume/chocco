@@ -1,0 +1,24 @@
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: $white;
+  background: #2f3234;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  display: none;
+
+  &--active {
+    display: flex;
+  }
+}
+
+.fullscreen-menu__close {
+  top: 5.5%;
+  right: 4%;
+}
