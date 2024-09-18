@@ -25,6 +25,7 @@ slider.addEventListener('click', function (event) {
   let direction = '';
   let slidermenuList = slider.querySelector('.slidermenu__list');
   let activeItem = slider.querySelector('.slidermenu__item--active')
+  let moveStart = false;
 
   if (event.target.closest('a').classList.value.includes('prev')) {
     direction = 'left';
@@ -36,10 +37,25 @@ slider.addEventListener('click', function (event) {
 
 
   function loop(direction, event) {
+    if (moveStart) return;
+
+    let delay = 400;
+
+    const mediaQuery = window.matchMedia('(max-width: 768px)')
+
+    if (mediaQuery.matches) {
+      delay = 200;
+    }
+
+
     let prevActiveElement = slider.querySelector('.slidermenu__item--active');
+
     let prevActiveElementClass = 'prev-' + direction;
-    prevActiveElement.classList.add(prevActiveElementClass)
+
+    prevActiveElement.classList.add(prevActiveElementClass);
+
     setTimeout(function () {
+      moveStart = true;
       prevActiveElement.classList.remove(prevActiveElementClass);
 
       slider.querySelector('.slidermenu__item--active').classList.remove('slidermenu__item--active');
@@ -59,15 +75,10 @@ slider.addEventListener('click', function (event) {
       }
       setTimeout(function () {
         slidermenuList.firstElementChild.classList.add('slidermenu__item--active');
-      }, 400)
+      }, delay)
 
-    }, 400)
-
-
-
-
+    }, delay)
 
   }
-
 
 })

@@ -61,12 +61,21 @@
 
   .prev-right {
     right: 100%;
-    transition: right 0.8s;
+    transition: right 1s;
+
+    @include tablets {
+      transition: right 0.4s;
+    }
   }
 
   .prev-left {
     right: -100%;
-    transition: right 0.8s;
+    transition: right 1s;
+
+    @include tablets {
+      transition: right 0.4s;
+    }
+
   }
 }
 
@@ -78,7 +87,11 @@
   overflow: hidden;
   right: 0;
   top: 0;
-  transition: right 0.8s;
+  transition: right 1s;
+
+  @include tablets {
+    transition: right 0.4s;
+  }
 
   &--active {
     position: relative;
