@@ -5,10 +5,18 @@
   align-items: center;
   justify-content: center;
 
+  @include tablets {
+    justify-content: flex-start;
+  }
 }
 
 .team__title {
   margin-bottom: 3%;
+
+  @include tablets {
+    padding: 2%;
+    margin-bottom: 0;
+  }
 }
 
 .team__list {
@@ -43,20 +51,20 @@
     bottom: 2%;
     width: 11%;
 
-    @include tablets{
+    @include tablets {
       width: auto;
       height: 10%;
     }
   }
 
-  .ornament{
+  .ornament {
     bottom: 15%;
     right: 0%;
     width: auto;
     height: 70%;
     transform: translate(100%, 0%);
 
-    @include phones{
+    @include phones {
       display: none;
     }
   }

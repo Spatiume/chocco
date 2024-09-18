@@ -4,13 +4,18 @@
   align-items: center;
   max-width: 240px;
   width: 100%;
+  height: 100%;
+  @include tablets{
+    height: 30px;
+  }
 }
 
 .teammate__img-wrapper {
   margin-bottom: rem(21px);
-
-  @include tablets{
+  
+  @include tablets {
     display: none;
+    margin-bottom: 4px;
   }
 }
 
@@ -48,13 +53,18 @@
   color: #666666;
 }
 
-.teammate--active{
+.teammate--active {
 
-  .teammate__name{
+  @include tablets{
+    height: 380px;
+    transition: height 0.4s;
+  }
+
+  .teammate__name {
     &::before {
       display: none;
     }
-  
+
     &::after {
       content: '\25B2';
       display: inline-block;
@@ -63,15 +73,16 @@
   }
 
 
-  .teammate__info{
+  .teammate__info {
     display: block;
   }
 
-  .teammate__prof{
+  .teammate__prof {
     display: block;
   }
 
-  .teammate__img-wrapper{
+  .teammate__img-wrapper {
+    height: 100%;
     display: block;
   }
 }
