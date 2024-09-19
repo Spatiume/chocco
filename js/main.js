@@ -24,8 +24,6 @@ slider.addEventListener('click', function (event) {
 
   let direction = '';
   let slidermenuList = slider.querySelector('.slidermenu__list');
-  let activeItem = slider.querySelector('.slidermenu__item--active')
-  let moveStart = false;
 
   if (event.target.closest('a').classList.value.includes('prev')) {
     direction = 'left';
@@ -37,51 +35,34 @@ slider.addEventListener('click', function (event) {
 
 
   function loop(direction, event) {
-    if (moveStart) return;
 
-    let delay = 400;
-
-    const mediaQuery = window.matchMedia('(max-width: 768px)')
-
-    if (mediaQuery.matches) {
-      delay = 200;
-    }
-
+    let delay = (window.matchMedia('(max-width: 768px)').matches) ? 200 : 400;
 
     let prevActiveElement = slider.querySelector('.slidermenu__item--active');
-
-    let prevActiveElementClass = 'prev-' + direction;
-
-    prevActiveElement.classList.add(prevActiveElementClass);
+    prevActiveElement.classList.add('prev-' + direction);
 
     setTimeout(function () {
-      moveStart = true;
-      prevActiveElement.classList.remove(prevActiveElementClass);
-
-      slider.querySelector('.slidermenu__item--active').classList.remove('slidermenu__item--active');
+      prevActiveElement.classList.remove('prev-' + direction);
+      prevActiveElement.classList.remove('slidermenu__item--active');
 
       if (direction === 'right') {
-        for (let item of slidermenuList.children) {
-          item.classList.remove('transition-left');
-          item.classList.add('transition-right');
-        }
         slidermenuList.append(slidermenuList.firstElementChild);
+        slidermenuList.firstElementChild.classList.add('prev-' + 'left');
       } else {
-        for (let item of slidermenuList.children) {
-          item.classList.remove('transition-right');
-          item.classList.add('transition-left');
-        }
         slidermenuList.prepend(slidermenuList.lastElementChild);
+        slidermenuList.firstElementChild.classList.add('prev-' + 'right');
       }
-      setTimeout(function () {
+      setTimeout(() => {
         slidermenuList.firstElementChild.classList.add('slidermenu__item--active');
-      }, delay)
+        slidermenuList.firstElementChild.classList.remove('prev-' + 'left');
+        slidermenuList.firstElementChild.classList.remove('prev-' + 'right');
+      }, 200)
 
     }, delay)
 
   }
 
-})
+});
 
 
 const teamlist = document.querySelector('.team__list');
@@ -89,13 +70,30 @@ const teamlist = document.querySelector('.team__list');
 teamlist.addEventListener('click', function (event) {
 
   if (!event.target.closest('.teammate')) return;
+  event.preventDefault();
 
   if (event.target.closest('.teammate').classList.contains('teammate--active')) {
     event.target.closest('.teammate').classList.remove('teammate--active');
     return;
   }
-  if(teamlist.querySelector('.teammate--active')){
+  if (teamlist.querySelector('.teammate--active')) {
     teamlist.querySelector('.teammate--active').classList.remove('teammate--active');
   }
   event.target.closest('.teammate').classList.add('teammate--active');
+})
+
+
+const choccoMenu = document.querySelector('.chocco-menu');
+
+choccoMenu.addEventListener('click', function (event) {
+  if (!event.target.closest('.chocco-menu__trigger')) return;
+  event.preventDefault();
+
+  let activeItem = choccoMenu.querySelector('.chocco-menu__item--active');
+  if (activeItem) {
+    activeItem.classList.remove('chocco-menu__item--active')
+  }
+
+  let item = event.target.closest('.chocco-menu__item');
+  item.classList.add('chocco-menu__item--active');
 })

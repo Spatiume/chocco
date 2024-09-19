@@ -47,21 +47,13 @@
   overflow: hidden;
   position: relative;
 
-  .transition-left {
-    right: 120%;
-  }
-
-  .transition-right {
-    right: -120%;
-  }
-
   .slidermenu__item--active {
     right: 0;
   }
 
   .prev-right {
-    right: 100%;
-    transition: right 1s;
+    right: 120%;
+    transition: right 0.6s;
 
     @include tablets {
       transition: right 0.4s;
@@ -69,8 +61,8 @@
   }
 
   .prev-left {
-    right: -100%;
-    transition: right 1s;
+    right: -120%;
+    transition: right 0.6s;
 
     @include tablets {
       transition: right 0.4s;
@@ -81,13 +73,13 @@
 
 .slidermenu__item {
   position: absolute;
+  top: 0;
+  right: 0;
   padding: 0 0;
   height: 0%;
   width: 100%;
   overflow: hidden;
-  right: 0;
-  top: 0;
-  transition: right 1s;
+  transition: right 0.6s;
 
   @include tablets {
     transition: right 0.4s;
@@ -110,9 +102,15 @@
   top: 48%;
 
 
+  
+
 
   &-icon {
     fill: $black;
+
+    &:focus, &:hover{
+      fill: $green;
+    }
   }
 
   &-prev {

@@ -20,6 +20,10 @@
 .menu--vertical {
   padding: 20%;
 
+  @include phones{
+    padding: 30% 20%;
+  }
+
   .menu__list {
     justify-content: space-between;
     flex-direction: column;
