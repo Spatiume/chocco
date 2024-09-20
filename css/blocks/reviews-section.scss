@@ -1,0 +1,85 @@
+.reviews-section__container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviews-section__title {
+  padding-bottom: 3.5%;
+}
+
+.reviews-section__content {
+  margin-bottom: 1.5%;
+  width: 100%;
+
+  @include tablets {
+    height: 65%;
+  }
+}
+
+
+
+.reviews-section__decoration {
+  display: block;
+
+  .berry5 {
+    right: 1%;
+    top: -2%;
+    width: 16%;
+    transform: translate(50%, 50%);
+
+    @include tablets {
+      right: 2%;
+      top: -4%;
+      width: auto;
+      height: 10%;
+    }
+  }
+
+  .berry6 {
+    left: -1%;
+    bottom: 2%;
+    width: 15%;
+
+    @include tablets {
+      width: auto;
+      height: 16%;
+      left: 5%;
+    }
+  }
+
+
+  .ornament {
+    top: 0%;
+    right: -5%;
+    width: auto;
+    height: 100%;
+    transform: translate(100%, 0%);
+
+    @include phones {
+      display: none;
+    }
+  }
+
+  .ornament-berry {
+    bottom: 0;
+    left: -3%;
+    width: 33%;
+  }
+
+}
+
+.reviews-section__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #232121c2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  display: none;
+}

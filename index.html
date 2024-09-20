@@ -710,12 +710,10 @@
                 <div class="chocco-menu__trigger chocco-menu__trigger--clone chocco-menu__milk">
                   <h4 class="chocco-menu__title">Батончики с молоком</h4>
                 </div>
-                <a href="#" class="chocho-menu__btn">
-                  <div class="closebtn">
-                    <svg class="icon icon__close">
-                      <use xlink:href="./icons/sprite.svg#close"></use>
-                    </svg>
-                  </div>
+                <a href="#" class="chocco-menu__btn">
+                  <svg class="icon icon__close">
+                    <use xlink:href="./icons/sprite.svg#close"></use>
+                  </svg>
                 </a>
               </li>
               <li class="chocco-menu__item">
@@ -733,7 +731,11 @@
                 <div class="chocco-menu__trigger chocco-menu__trigger--clone chocco-menu__honey">
                   <h4 class="chocco-menu__title">С мёдом и фруктами</h4>
                 </div>
-                <a href="#" class="chocho-menu__btn closebtn"></a>
+                <a href="#" class="chocco-menu__btn">
+                  <svg class="icon icon__close">
+                    <use xlink:href="./icons/sprite.svg#close"></use>
+                  </svg>
+                </a>
               </li>
               <li class="chocco-menu__item ">
                 <a href="#" class="chocco-menu__trigger chocco-menu__berries">
@@ -750,7 +752,11 @@
                 <div class="chocco-menu__trigger chocco-menu__trigger--clone chocco-menu__berries">
                   <h4 class="chocco-menu__title">Дикие ягоды</h4>
                 </div>
-                <a href="#" class="chocho-menu__btn closebtn"></a>
+                <a href="#" class="chocco-menu__btn">
+                  <svg class="icon icon__close">
+                    <use xlink:href="./icons/sprite.svg#close"></use>
+                  </svg>
+                </a>
               </li>
 
             </ul>
@@ -763,55 +769,58 @@
 
     </section>
 
-    <section class="section reviews">
-      <div class="container reviews__container">
-        <h3 class="section__title reviews__title">Отзывы</h3>
-        <div class="reviews__list">
-          <div class="reviews__item">
-            <div class="review">
-              <div class="review__left">
-                <img src="./img/reviews/review1.jpg" alt="фото отзыва" class="review__img">
+    <section class="section reviews-section">
+      <div class="container reviews-section__container">
+        <h3 class="section__title reviews-section__title">Отзывы</h3>
+        <div class="reviews-section__content">
+          <div class="review">
+            <div class="review__left">
+              <img src="./img/reviews/review1.jpg" alt="фото отзыва" class="review__img">
+            </div>
+            <div class="review__right">
+              <h4 class="review__title">Лучший перекус</h4>
+              <div class="review__text">
+                <p>Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за
+                  компьютером
+                  и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под
+                  рукой. Это приятно
+                  и удобно.</p>
               </div>
-              <div class="review__right">
-                <h4 class="review__title">Лучший перекус</h4>
-                <div class="review__text">
-                  <p>Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за
-                    компьютером
-                    и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под
-                    рукой. Это приятно
-                    и удобно.</p>
-                </div>
-                <div class="review__author">Алёна Хмельницкая</div>
+              <div class="review__author">Алёна Хмельницкая</div>
 
-              </div>
-              <div class="review__decoration">
-                <img src="./img/content-decoration/tree.png" alt="дерево" class="tree img-decoration">
-              </div>
+            </div>
+            <div class="review__decoration">
+              <img src="./img/content-decoration/tree.png" alt="дерево" class="tree img-decoration">
             </div>
           </div>
         </div>
-        <div class="reviews-btns">
-          <ul class="reviews-btns__list">
-            <li class="reviews-btns__item">
-              <a href="#" class="reviews-btns__link reviews-btns__link--active">
-                <img src="./img/reviews/review1.jpg" alt="фото отзыва" class="reviews-btns__img">
+        <div class="reviews">
+          <ul class="reviews__list">
+            <li class="reviews__item reviews__item--active">
+              <a href="#" class="reviews__link reviews__link--active">
+                <img src="./img/reviews/review1.jpg" alt="фото отзыва" class="reviews__img">
               </a>
             </li>
-            <li class="reviews-btns__item">
-              <a href="#" class="reviews-btns__link">
-                <img src="./img/reviews/review2.jpg" alt="фото отзыва" class="reviews-btns__img">
+            <li class="reviews__item">
+              <a href="#" class="reviews__link">
+                <img src="./img/reviews/review2.jpg" alt="фото отзыва" class="reviews__img">
               </a>
             </li>
-            <li class="reviews-btns__item">
-              <a href="#" class="reviews-btns__link">
-                <img src="./img/reviews/review3.jpg" alt="фото отзыва" class="reviews-btns__img">
+            <li class="reviews__item">
+              <a href="#" class="reviews__link">
+                <img src="./img/reviews/review3.jpg" alt="фото отзыва" class="reviews__img">
+              </a>
+            </li>
+            <li class="reviews__item">
+              <a href="#" class="reviews__link">
+                <div class="reviews-btn__new"></div>
               </a>
             </li>
 
 
           </ul>
         </div>
-        <div class="reviews__decoration bg-decoration">
+        <div class="reviews-section__decoration bg-decoration">
           <picture class="ornament img-decoration">
             <source media="(min-width: 480px)" srcset="./img/bg-decoration/ornament_3.png">
             <img src="" alt="орнамент" class="">
@@ -828,6 +837,40 @@
             <source srcset="./img/bg-decoration/berry6.png">
             <img src="" alt="ягоды" class="">
           </picture>
+        </div>
+        <div class="reviews-section__overlay">
+          <form class="form-review">
+            <div class="form-review__row form-review__avatar">
+              <label class="form-review__file-elem">
+                <input type="file" class="form-review__file">
+                <div class="form-review__file-wrapper">
+                  <img src="./img/reviews/camera.png" alt="">
+                </div>
+              </label>
+            </div>
+            <div class="form-review__row">
+              <label class="form-review__block">
+                <div class="form-review__title">Имя</div>
+                <input type="text" id="form-review__author" name="author" class="form-review__input">
+              </label>
+            </div>
+            <div class="form-review__row">
+              <label class="form-review__block">
+                <div class="form-review__title">Заголовок</div>
+                <input type="text" id="form-review__title" name="title" class="form-review__input">
+              </label>
+            </div>
+            <div class="form-review__row">
+              <label class="form-review__block">
+                <div class="form-review__title">Текст</div>
+                <textarea name="comment" id="form-review__text"
+                  class="form-review__input form-review__input--textarea"></textarea>
+              </label>
+            </div>
+            <div class="form-review__row form-review__btns">
+              <input type="submit" value="Отправить" class="form-review__btn btn">
+            </div>
+          </form>
         </div>
       </div>
     </section>
@@ -940,6 +983,7 @@
     <section class="section contacts">
       <div class="contacts__map">
       </div>
+
       <footer class="footer">
         <div class="container footer__container">
           <div class="footer__left-col">

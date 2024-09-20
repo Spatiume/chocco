@@ -2,7 +2,7 @@
   background: url("./../img/bg/menu-section.png") center center / cover no-repeat;
   color: $grey;
 
-  @include tablets{
+  @include tablets {
     background: url("./../img/bg/menu-section-mobile.jpg") center center / cover no-repeat;
 
   }
@@ -18,7 +18,7 @@
   justify-content: flex-end;
   z-index: 10;
 
-  @include tablets{
+  @include tablets {
     width: 100%;
   }
 }
@@ -32,9 +32,12 @@
 }
 
 .menu-section__content {
-  max-width: 80%;
-  @include tablets{
-    max-width: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+
+  @include tablets {
+    width: 100%;
   }
 }
 

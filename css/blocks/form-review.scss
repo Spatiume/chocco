@@ -1,0 +1,94 @@
+.form-review {
+  width: 65%;
+  max-height: 90%;
+  padding: 4%;
+  max-width: 700px;
+  background: url('./../img/bg/order-section.jpg') center center / cover no-repeat;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+
+
+.form-review__row {
+  display: flex;
+  margin-bottom: 1%;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  @include tablets {
+    justify-content: center;
+  }
+}
+
+.form-review__block {
+  flex: 1;
+  margin-right: rem(20px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.form-review__title {
+  margin-bottom: rem(6px);
+}
+
+.form-review__input {
+  width: 100%;
+  padding: 2%;
+  border-radius: rem(10px);
+  border: 2px solid transparent;
+
+  @include tablets {
+    padding: 10px 18px;
+  }
+}
+
+.form-review__input--textarea {
+  resize: initial;
+  height: rem(100px);
+  margin-bottom: rem(5px);
+
+  @include tablets {
+    height: 100px;
+  }
+}
+
+.form-review__file {
+  display: none;
+}
+
+.form-review__avatar {
+  display: flex;
+  justify-content: center;
+
+}
+
+.form-review__file-wrapper {
+
+  display: block;
+  background: $white;
+  width: 150px;
+  height: 150px;
+  border: 2px solid white;
+  border-radius: 30px;
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.form-review__btn {
+  background-color: $green;
+  color: #fff;
+  border: none;
+  margin-right: 10px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

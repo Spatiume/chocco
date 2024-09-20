@@ -1,72 +1,64 @@
-.reviews__container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.reviews__title {
-  padding-bottom: 3.5%;
-}
-
 .reviews__list {
-  margin-bottom: 1.5%;
-
-  @include tablets {
-    height: 65%;
-  }
+  display: flex;
 }
 
 .reviews__item {
-  height: 100%;
+  width: 80px;
+  height: 80px;
+  border: 5px solid transparent;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  margin-right: rem(10px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    border: 5px solid $green;
+  }
 }
 
-.reviews__decoration {
+
+.reviews__link {
   display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
 
-  .berry5 {
-    right: 1%;
-    top: -2%;
-    width: 16%;
-    transform: translate(50%, 50%);
+.reviews__item--active {
+  border: 5px solid $green;
+}
 
-    @include tablets {
-      right: 2%;
-      top: -4%;
-      width: auto;
-      height: 10%;
-    }
+.reviews-btn__new {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $green;
+    width: 50%;
+    height: 10%;
+    border-radius: 10px;
   }
 
-  .berry6 {
-    left: -1%;
-    bottom: 2%;
-    width: 15%;
-
-    @include tablets {
-      width: auto;
-      height: 16%;
-      left: 5%;
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    background: $green;
+    width: 50%;
+    height: 10%;
+    border-radius: 10px;
   }
-
-
-  .ornament {
-    top: 0%;
-    right: -5%;
-    width: auto;
-    height: 100%;
-    transform: translate(100%, 0%);
-
-    @include phones {
-      display: none;
-    }
-  }
-
-  .ornament-berry {
-    bottom: 0;
-    left: -3%;
-    width: 33%;
-  }
-
 }
