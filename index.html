@@ -796,28 +796,25 @@
         </div>
         <div class="reviews">
           <ul class="reviews__list">
-            <li class="reviews__item reviews__item--active">
+            <li class="reviews__item reviews__item--active" data-review-id="0">
               <a href="#" class="reviews__link reviews__link--active">
                 <img src="./img/reviews/review1.jpg" alt="фото отзыва" class="reviews__img">
               </a>
             </li>
-            <li class="reviews__item">
+            <li class="reviews__item" data-review-id="1">
               <a href="#" class="reviews__link">
-                <img src="./img/reviews/review2.jpg" alt="фото отзыва" class="reviews__img">
+                <img src="./img/reviews/review2.jpg " alt="фото отзыва" class="reviews__img">
               </a>
             </li>
-            <li class="reviews__item">
+            <li class="reviews__item" data-review-id="2">
               <a href="#" class="reviews__link">
                 <img src="./img/reviews/review3.jpg" alt="фото отзыва" class="reviews__img">
               </a>
             </li>
             <li class="reviews__item">
-              <a href="#" class="reviews__link">
-                <div class="reviews-btn__new"></div>
+              <a href="#" class="reviews__link reviews-btn__new">
               </a>
             </li>
-
-
           </ul>
         </div>
         <div class="reviews-section__decoration bg-decoration">
@@ -838,39 +835,42 @@
             <img src="" alt="ягоды" class="">
           </picture>
         </div>
-        <div class="reviews-section__overlay">
-          <form class="form-review">
-            <div class="form-review__row form-review__avatar">
-              <label class="form-review__file-elem">
-                <input type="file" class="form-review__file">
-                <div class="form-review__file-wrapper">
-                  <img src="./img/reviews/camera.png" alt="">
-                </div>
-              </label>
-            </div>
-            <div class="form-review__row">
-              <label class="form-review__block">
-                <div class="form-review__title">Имя</div>
-                <input type="text" id="form-review__author" name="author" class="form-review__input">
-              </label>
-            </div>
-            <div class="form-review__row">
-              <label class="form-review__block">
-                <div class="form-review__title">Заголовок</div>
-                <input type="text" id="form-review__title" name="title" class="form-review__input">
-              </label>
-            </div>
-            <div class="form-review__row">
-              <label class="form-review__block">
-                <div class="form-review__title">Текст</div>
-                <textarea name="comment" id="form-review__text"
-                  class="form-review__input form-review__input--textarea"></textarea>
-              </label>
-            </div>
-            <div class="form-review__row form-review__btns">
-              <input type="submit" value="Отправить" class="form-review__btn btn">
-            </div>
-          </form>
+        <div class="overlay reviews-section__overlay">
+          <div class="overlay__container">
+            <form class="form-review">
+              <div class="form-review__row form-review__avatar">
+                <label class="form-review__file-elem">
+                  <input type="file" class="form-review__file">
+                  <div class="form-review__file-wrapper">
+                    <img src="./img/reviews/camera.png" alt="">
+                  </div>
+                </label>
+              </div>
+              <div class="form-review__row">
+                <label class="form-review__block">
+                  <div class="form-review__title">Имя</div>
+                  <input type="text" id="form-review__author" name="author" class="form-review__input">
+                </label>
+              </div>
+              <div class="form-review__row">
+                <label class="form-review__block">
+                  <div class="form-review__title">Заголовок</div>
+                  <input type="text" id="form-review__title" name="title" class="form-review__input">
+                </label>
+              </div>
+              <div class="form-review__row">
+                <label class="form-review__block">
+                  <div class="form-review__title">Текст</div>
+                  <textarea name="comment" id="form-review__text"
+                    class="form-review__input form-review__input--textarea"></textarea>
+                </label>
+              </div>
+              <div class="form-review__row form-review__btns">
+                <input type="submit" value="Отправить" class="form-review__btn btn">
+              </div>
+            </form>
+            <a class="overlay__closebtn closebtn"> </a>
+          </div>
         </div>
       </div>
     </section>

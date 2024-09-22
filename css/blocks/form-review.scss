@@ -1,8 +1,8 @@
 .form-review {
-  width: 65%;
-  max-height: 90%;
-  padding: 4%;
+  width: 65vw;
+  max-height: 90vh;
   max-width: 700px;
+  padding: 4%;
   background: url('./../img/bg/order-section.jpg') center center / cover no-repeat;
   border-radius: 20px;
   border: 1px solid white;
@@ -13,7 +13,7 @@
   display: flex;
   margin-bottom: 1%;
 
-  &:last-child{
+  &:last-child {
     margin-bottom: 0;
   }
 
@@ -63,6 +63,7 @@
 .form-review__avatar {
   display: flex;
   justify-content: center;
+  padding: 0 30px;
 
 }
 
@@ -70,16 +71,23 @@
 
   display: block;
   background: $white;
-  width: 150px;
-  height: 150px;
+  max-width: 150px;
+  max-height: 150px;
+  width: 100%;
+  height: 100%;
   border: 2px solid white;
   border-radius: 30px;
 
-  img{
+
+  img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+}
+
+.form-review__btns {
+  justify-content: center;
 }
 
 .form-review__btn {

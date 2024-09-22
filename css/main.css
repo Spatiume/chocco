@@ -539,6 +539,43 @@ img {
           transform: translate(-50%, 50%);
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+  display: none;
+}
+
+.overlay__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overlay__closebtn {
+  top: 3%;
+  right: 4%;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -655,6 +692,7 @@ img {
   position: absolute;
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 .closebtn::before {
   content: "";
@@ -2105,23 +2143,7 @@ img {
 }
 
 .reviews-section__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background: rgba(35, 33, 33, 0.7607843137);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  z-index: 100;
-  display: none;
 }
 
 .review {
@@ -2204,10 +2226,10 @@ img {
 }
 
 .form-review {
-  width: 65%;
-  max-height: 90%;
-  padding: 4%;
+  width: 65vw;
+  max-height: 90vh;
   max-width: 700px;
+  padding: 4%;
   background: url("./../img/bg/order-section.jpg") center center/cover no-repeat;
   border-radius: 20px;
   border: 1px solid white;
@@ -2278,13 +2300,16 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0 30px;
 }
 
 .form-review__file-wrapper {
   display: block;
   background: #fff;
-  width: 150px;
-  height: 150px;
+  max-width: 150px;
+  max-height: 150px;
+  width: 100%;
+  height: 100%;
   border: 2px solid white;
   border-radius: 30px;
 }
@@ -2293,6 +2318,12 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.form-review__btns {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .form-review__btn {
@@ -2333,6 +2364,10 @@ img {
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+.reviews__link img {
+  width: 100%;
+  height: 100%;
 }
 
 .reviews__item--active {
