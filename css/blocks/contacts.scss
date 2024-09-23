@@ -1,7 +1,167 @@
-.contacts__map {
+.contacts__container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   flex: 1;
-  background: url(./../img/temporarily/map.png);
   width: 100%;
   height: calc(100% - 93px);
+}
+
+.map {
+  width: 80%;
+  height: 80%;
+  position: relative;
+
+  @include tablets{
+    width: 95%;
+  }
+
+  .ymaps-2-1-79-editor-pane {
+    canvas {
+      display: none;
+    }
+  }
+
+  .ymaps-2-1-79-image {
+    border: 2px solid black;
+  }
+}
+
+.contacts__map-info {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  padding: 0%;
+  border-radius: 10px;
+  z-index: 10;
+  background: $white;
+  max-width: 370px;
+  width: 45%;
+
+  @include tablets {
+    width: 80%;
+  }
+
+}
+
+.map-info {
+  font-size: rem(21px);
+
+
+  &__content {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  &__time {
+    margin-bottom: 3%;
+
+  }
+
+  &__adress {
+    font-weight: normal;
+    font-style: normal;
+    color: #000;
+    margin-bottom: 3%;
+  }
+
+  &__phone {
+    margin-bottom: 3%;
+
+    .phone__link {
+      font-size: rem(18px);
+      color: $green;
+    }
+
+    .icon__phone {
+      fill: $green;
+    }
+  }
+
+  &__btn {
+    align-self: center;
+
+    @include tablets {
+      padding: 5%;
+      width: 80%;
+    }
+  }
+
+}
+
+.map-info__show {
+  display: block;
+  width: 100%;
+  padding-left: 7%;
+  padding-right: 1.5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  &::before {
+    content: '\25BC';
+    display: inline-block;
+    order: 10;
+    font-size: 26px;
+    color: $green;
+  }
+
+  &:hover {
+    h4 {
+      font-weight: 500;
+    }
+
+    &::before {
+      color: $dark-green;
+    }
+  }
+
+
+}
+
+.map-info--active {
+  padding: 4%;
+
+  @include tablets {
+    padding: 25px;
+  }
+
+  .map-info__show {
+    display: none;
+  }
+
+  .map-info__content {
+    display: flex;
+  }
+}
+
+
+
+.map-info__close {
+
+  right: 2.5%;
+  top: 2.5%;
+  width: 20px;
+  height: 20px;
+
+
+  &::before,
+  &::after {
+    background: $green;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+
+    &::before,
+    &::after {
+      background: $dark-green;
+    }
+  }
+
 }

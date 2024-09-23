@@ -8,6 +8,7 @@
   <title>CHOCCO Главная страница
   </title>
   <link rel="stylesheet" href="./css/main.css">
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 
 </head>
 
@@ -337,7 +338,7 @@
                   </div>
                   <div class="delicacy__btns">
                     <h4 class="delicacy__price">140 &#8381;</h4>
-                    <a class="delicacy__btn btn">Заказать</a>
+                    <a class="delicacy__btn btn btn--green">Заказать</a>
                   </div>
                 </div>
               </article>
@@ -426,7 +427,7 @@
                   </div>
                   <div class="delicacy__btns">
                     <h4 class="delicacy__price">140 &#8381;</h4>
-                    <a class="delicacy__btn btn">Заказать</a>
+                    <a class="delicacy__btn btn btn--green">Заказать</a>
                   </div>
                 </div>
               </article>
@@ -515,7 +516,7 @@
                   </div>
                   <div class="delicacy__btns">
                     <h4 class="delicacy__price">140 &#8381;</h4>
-                    <a class="delicacy__btn btn">Заказать</a>
+                    <a class="delicacy__btn btn  btn--green">Заказать</a>
                   </div>
                 </div>
               </article>
@@ -604,7 +605,7 @@
                   </div>
                   <div class="delicacy__btns">
                     <h4 class="delicacy__price">140 &#8381;</h4>
-                    <a class="delicacy__btn btn">Заказать</a>
+                    <a class="delicacy__btn btn  btn--green">Заказать</a>
                   </div>
                 </div>
               </article>
@@ -866,7 +867,7 @@
                 </label>
               </div>
               <div class="form-review__row form-review__btns">
-                <input type="submit" value="Отправить" class="form-review__btn btn">
+                <input type="submit" value="Отправить" class="form-review__btn btn  btn--green">
               </div>
             </form>
             <a class="overlay__closebtn closebtn"> </a>
@@ -962,7 +963,7 @@
               </label>
             </div>
             <div class="order__row order__btns">
-              <input type="submit" value="Заказать" class="order__btn btn">
+              <input type="submit" value="Заказать" class="order__btn btn  btn--green">
               <input type="reset" value="Очистить" class="order__btn btn order__btn-reset">
             </div>
           </div>
@@ -981,7 +982,30 @@
     </section>
 
     <section class="section contacts">
-      <div class="contacts__map">
+      <div class="contacts__container">
+        <h2 class="section__title contacts__title">Как нас найти</h2>
+        <div class="contacts__map map" id="map">
+          <div class="contacts__map-info map-info map-info--active">
+            <a class="map-info__show map-info__trigger">
+              <h4>Показать контакты</h4>
+            </a>
+            <div class="map-info__content">
+              <h4 class="map-info__time"><b>Время работы:</b> 10:00 - 18:00</h4>
+              <address class="map-info__adress">Москва, ул.Новый Арбат, д.31/12</address>
+              <div class="map-info__phone phone">
+                <div class="phone__icon">
+                  <svg class="icon icon__phone">
+                    <use xlink:href="./icons/sprite.svg#phone"></use>
+                  </svg>
+                </div>
+                <a href="tel:+88009039090" class="phone__link">8 800 903 90 90</a>
+              </div>
+              <a href="https://yandex.ru/maps/2/saint-petersburg/?from=api-maps&ll=30.325289%2C59.889140&mode=routes&origin=jsapi_2_1_79&rtext=~59.889240%2C30.330789&rtt=pd&ruri=~&z=15"
+                class="btn map-info__btn btn--green" target="_blank">Проложить маршрут</a>
+              <a href="#" class="closebtn map-info__close map-info__trigger"></a>
+            </div>
+          </div>
+        </div>
       </div>
 
       <footer class="footer">
@@ -1004,28 +1028,28 @@
               <div class="socials">
                 <ul class="socials__list">
                   <div class="socials__item">
-                    <a href="https://vk.com/" class="socials__link">
+                    <a href="https://vk.com/" target="_blank" class="socials__link">
                       <svg class="icon icon__social icon__vk">
                         <use xlink:href="./icons/sprite.svg#vk"></use>
                       </svg>
                     </a>
                   </div>
                   <div class="socials__item">
-                    <a href="https://www.facebook.com/" class="socials__link">
+                    <a href="https://www.facebook.com/" target="_blank" class="socials__link">
                       <svg class="icon icon__social icon__facebook">
                         <use xlink:href="./icons/sprite.svg#facebook"></use>
                       </svg>
                     </a>
                   </div>
                   <div class="socials__item">
-                    <a href="https://www.instagram.com/" class="socials__link">
+                    <a href="https://www.instagram.com/" target="_blank" class="socials__link">
                       <svg class="icon icon__social icon__inst">
                         <use xlink:href="./icons/sprite.svg#inst"></use>
                       </svg>
                     </a>
                   </div>
                   <div class="socials__item">
-                    <a href="https://x.com/?lang=ru" class="socials__link">
+                    <a href="https://x.com/?lang=ru" target="_blank" class="socials__link">
                       <svg class="icon icon__social icon__twitter">
                         <use xlink:href="./icons/sprite.svg#twitter"></use>
                       </svg>

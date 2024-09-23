@@ -8,10 +8,21 @@
   font-size: rem(16px);
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: -1.2px;
-
+  text-decoration: none;
+  // letter-spacing: -1.2px;
+  text-align: center;
   &:hover {
     background: $green;
     color: #fff;
   }
+}
+
+.btn--green {
+  background: $green;
+  color: #fff;
+
+  &:hover {
+    background: $dark-green;
+  }
+
 }
