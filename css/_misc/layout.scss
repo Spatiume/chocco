@@ -3,11 +3,11 @@ body {
   height: 100%;
   font-size: 16px;
 
-  @include tablets{
+  @include tablets {
     font-size: 15px;
   }
 
-  @include phones{
+  @include phones {
     font-size: 14px;
   }
 
@@ -85,7 +85,7 @@ footer {
   box-sizing: border-box;
 }
 
-a{
+a {
   color: inherit;
 }
 
@@ -94,9 +94,10 @@ button {
   border: none;
   cursor: pointer;
   color: inherit;
+  padding: 0;
 }
 
-img{
+img {
   display: block;
   max-width: 100%;
   max-height: 100%;

@@ -23,9 +23,6 @@
     }
   }
 
-  .ymaps-2-1-79-image {
-    border: 2px solid black;
-  }
 }
 
 .contacts__map-info {
@@ -47,8 +44,8 @@
 
 .map-info {
   font-size: rem(21px);
-
-
+  
+  
   &__content {
     display: none;
     flex-direction: column;
@@ -101,6 +98,8 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  user-select: none;
+
 
   &::before {
     content: '\25BC';
