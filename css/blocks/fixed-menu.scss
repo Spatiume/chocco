@@ -1,0 +1,54 @@
+.fixed-menu {
+  position: fixed;
+  top: 10%;
+  right: 3%;
+  z-index: 1000;
+
+  @media screen and (max-width: 1100px) {
+    display: none;
+  }
+}
+
+
+
+
+.fixed-menu__list {
+  display: flex;
+  flex-direction: column;
+
+  .fixed-menu__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 5px;
+    cursor: pointer;
+  }
+
+  .fixed-menu__link {
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: $white;
+    border-radius: 50%;
+
+  }
+
+  .active {
+    border: 1px solid $white;
+    border-radius: 50%;
+  }
+}
+
+.dark {
+  .fixed-menu__link {
+    background-color: $dark-grey;
+
+  }
+
+  .active {
+    border: 1px solid $dark-grey;
+  }
+
+}

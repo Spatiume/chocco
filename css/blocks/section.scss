@@ -2,7 +2,12 @@
   display: flex;
   flex-direction: column;
   // min-width: 650px;
-  height: 100vh;
+  height: 650px;
+  height: 100%;
+
+  @include tablets{
+    min-height: initial;
+  }
 
 }
 
