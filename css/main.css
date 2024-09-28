@@ -2597,6 +2597,40 @@ img {
   background: url("./../img/player/player.jpg") center center/cover no-repeat;
   cursor: pointer;
 }
+.player__splash .player__splash-loading {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.player__splash .player__splash-error {
+  display: none;
+  width: 70%;
+  height: 70%;
+  background: rgba(255, 255, 255, 0.9607843137);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 10px;
+  padding: 7%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.player__splash .player__splash-error .error__img-wrapper {
+  width: 30%;
+}
 .player__splash-start {
   position: absolute;
   top: 50%;
@@ -2765,6 +2799,24 @@ img {
   margin-right: 4px;
 }
 
+.player--loading .player__splash-loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.player--loading .player__splash-start {
+  display: none;
+}
+
+.player--error .player__splash-error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.player--error .player__splash-start {
+  display: none;
+}
+
 .player--active .player__splash {
   display: none;
 }
@@ -2793,6 +2845,40 @@ img {
   display: block;
 }
 
+.loader {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-animation: rotation 1s linear infinite;
+          animation: rotation 1s linear infinite;
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 .order-section {
   background: url("./../img/bg/order-section.jpg") center center/cover no-repeat;
 }

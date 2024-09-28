@@ -35,6 +35,34 @@ $middle-grey: #6d6c6c;
   background: url('./../img/player/player.jpg') center center/cover no-repeat;
   cursor: pointer;
 
+  .player__splash-loading {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .player__splash-error {
+    display: none;
+    width: 70%;
+    height: 70%;
+    background: #fffffff5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 7%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .error__img-wrapper {
+      width: 30%;
+    }
+  }
+
   &-start {
     position: absolute;
     top: 50%;
@@ -220,6 +248,27 @@ $middle-grey: #6d6c6c;
 
 }
 
+
+.player--loading {
+  .player__splash-loading{
+    display: flex;
+  }
+
+  .player__splash-start {
+    display: none;
+  }
+}
+
+.player--error {
+  .player__splash-error {
+    display: flex;
+  }
+
+  .player__splash-start {
+    display: none;
+  }
+}
+
 .player--active {
 
   .player__splash {
@@ -254,5 +303,26 @@ $middle-grey: #6d6c6c;
     .volume__button::before {
       display: block;
     }
+  }
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }

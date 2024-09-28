@@ -857,9 +857,17 @@
             <div class="player">
               <div class="player__wrapper">
                 <div id="yt-player" class="player__elem yt-player">
-
                 </div>
                 <div class="player__splash">
+                  <div class="player__splash-loading">
+                    <span class="loader"></span>
+                  </div>
+                  <div class="player__splash-error">
+                    <h4 class="error__text">К сожалению, плеер не доступен. Включите vpn или попробуйте повторить позже.</h4>
+                    <div class="error__img-wrapper">
+                      <img src="./img/player/sad-smile.png" class="error__img" alt="sad-smile">
+                    </div>
+                  </div>
                   <button class="player__splash-start">
                     <svg class="icon icon__social icon__play  player__icon">
                       <use xlink:href="./icons/sprite.svg#play"></use>
@@ -1146,7 +1154,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"></script>
-  <script src="./js/main.js"></script>
+  <script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
