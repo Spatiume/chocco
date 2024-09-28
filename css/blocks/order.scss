@@ -40,6 +40,7 @@
 .order__block {
   flex: 1;
   margin-right: rem(20px);
+  position: relative;
 
   &:last-child {
     margin-right: 0;
@@ -194,4 +195,17 @@
   text-transform: none;
   color: $green;
   background-color: #fff;
+}
+
+.order__block--error{
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: -1%;
+  padding: 2%;
+  border-radius: 10px;
+  background-color: $white;
+  color: firebrick;
+  z-index: 10;
+  
 }

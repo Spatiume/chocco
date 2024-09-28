@@ -611,7 +611,7 @@ img {
   border: 1px solid #333537;
 }
 
-.overlay {
+.overlay-review {
   position: absolute;
   top: 0;
   left: 0;
@@ -630,7 +630,7 @@ img {
   display: none;
 }
 
-.overlay__container {
+.overlay-review__container {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -643,7 +643,7 @@ img {
           align-items: center;
 }
 
-.overlay__closebtn {
+.overlay-review__closebtn {
   top: 3%;
   right: 4%;
 }
@@ -1910,6 +1910,7 @@ img {
           align-items: center;
   margin-bottom: 0.375rem;
   text-align: center;
+  cursor: pointer;
 }
 .teammate__name::before {
   content: "▼";
@@ -2149,6 +2150,10 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.reviews-section {
+  position: relative;
 }
 
 .reviews-section__container {
@@ -2437,8 +2442,14 @@ img {
       flex-shrink: 0;
   margin-right: 0.625rem;
 }
+@media screen and (max-width: 480px) {
+  .reviews__item {
+    margin-right: 2px;
+  }
+}
 .reviews__item:last-child {
   margin-right: 0;
+  border: 5px solid #333537;
 }
 .reviews__item:hover {
   border: 5px solid #365a49;
@@ -2464,6 +2475,9 @@ img {
   height: 100%;
   position: relative;
 }
+.reviews-btn__new:hover::before, .reviews-btn__new:hover::after, .reviews-btn__new:focus::before, .reviews-btn__new:focus::after, .reviews-btn__new:active::before, .reviews-btn__new:active::after {
+  background: #365a49;
+}
 .reviews-btn__new::before {
   content: "";
   position: absolute;
@@ -2471,7 +2485,7 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: #365a49;
+  background: #333537;
   width: 50%;
   height: 10%;
   border-radius: 10px;
@@ -2483,7 +2497,7 @@ img {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) rotate(-90deg);
           transform: translate(-50%, -50%) rotate(-90deg);
-  background: #365a49;
+  background: #333537;
   width: 50%;
   height: 10%;
   border-radius: 10px;
@@ -3002,6 +3016,7 @@ img {
       -ms-flex: 1;
           flex: 1;
   margin-right: 1.25rem;
+  position: relative;
 }
 .order__block:last-child {
   margin-right: 0;
@@ -3155,6 +3170,82 @@ img {
   text-transform: none;
   color: #365a49;
   background-color: #fff;
+}
+
+.order__block--error {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  bottom: -1%;
+  padding: 2%;
+  border-radius: 10px;
+  background-color: #fff;
+  color: firebrick;
+  z-index: 10;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5803921569);
+  display: none;
+}
+
+.overlay__container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  max-width: 450px;
+  background-color: white;
+  border-radius: 10px;
+}
+@media screen and (max-width: 480px) {
+  .overlay__container {
+    width: 80%;
+  }
+}
+
+.overlay__content {
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+}
+.overlay__content h4 {
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  .overlay__content {
+    padding: 40px 40px;
+  }
+}
+
+.overlay__closebtn {
+  top: 3%;
+  right: 4%;
+}
+.overlay__closebtn::before, .overlay__closebtn::after {
+  background: #910000;
 }
 
 .contacts__container {

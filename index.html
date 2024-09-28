@@ -810,44 +810,45 @@
               <img src="" alt="ягоды" class="">
             </picture>
           </div>
-          <div class="overlay reviews-section__overlay">
-            <div class="overlay__container">
-              <form class="form-review">
-                <div class="form-review__row form-review__avatar">
-                  <label class="form-review__file-elem">
-                    <input type="file" class="form-review__file">
-                    <div class="form-review__file-wrapper">
-                      <img src="./img/reviews/camera.png" alt="">
-                    </div>
-                  </label>
-                </div>
-                <div class="form-review__row">
-                  <label class="form-review__block">
-                    <div class="form-review__title">Имя</div>
-                    <input type="text" id="form-review__author" name="author" class="form-review__input">
-                  </label>
-                </div>
-                <div class="form-review__row">
-                  <label class="form-review__block">
-                    <div class="form-review__title">Заголовок</div>
-                    <input type="text" id="form-review__title" name="title" class="form-review__input">
-                  </label>
-                </div>
-                <div class="form-review__row">
-                  <label class="form-review__block">
-                    <div class="form-review__title">Текст</div>
-                    <textarea name="comment" id="form-review__text"
-                      class="form-review__input form-review__input--textarea"></textarea>
-                  </label>
-                </div>
-                <div class="form-review__row form-review__btns">
-                  <input type="submit" value="Отправить" class="form-review__btn btn  btn--green">
-                </div>
-              </form>
-              <a class="overlay__closebtn closebtn"> </a>
-            </div>
+        </div>
+        <div class="overlay-review reviews-section__overlay">
+          <div class="overlay-review__container">
+            <form class="form-review">
+              <div class="form-review__row form-review__avatar">
+                <label class="form-review__file-elem">
+                  <input type="file" class="form-review__file">
+                  <div class="form-review__file-wrapper">
+                    <img src="./img/reviews/camera.png" alt="">
+                  </div>
+                </label>
+              </div>
+              <div class="form-review__row">
+                <label class="form-review__block">
+                  <div class="form-review__title">Имя</div>
+                  <input type="text" id="form-review__author" name="author" class="form-review__input" required>
+                </label>
+              </div>
+              <div class="form-review__row">
+                <label class="form-review__block">
+                  <div class="form-review__title">Заголовок</div>
+                  <input type="text" id="form-review__title" name="title" class="form-review__input" required>
+                </label>
+              </div>
+              <div class="form-review__row">
+                <label class="form-review__block">
+                  <div class="form-review__title">Текст</div>
+                  <textarea name="comment" id="form-review__text"
+                    class="form-review__input form-review__input--textarea" required></textarea>
+                </label>
+              </div>
+              <div class="form-review__row form-review__btns">
+                <input type="submit" value="Отправить" class="form-review__btn btn  btn--green">
+              </div>
+            </form>
+            <a class="overlay-review__closebtn closebtn"> </a>
           </div>
         </div>
+
       </section>
 
       <section class="section work">
@@ -863,7 +864,8 @@
                     <span class="loader"></span>
                   </div>
                   <div class="player__splash-error">
-                    <h4 class="error__text">К сожалению, плеер не доступен. Включите vpn или попробуйте повторить позже.</h4>
+                    <h4 class="error__text">К сожалению, плеер не доступен. Включите vpn или попробуйте повторить позже.
+                    </h4>
                     <div class="error__img-wrapper">
                       <img src="./img/player/sad-smile.png" class="error__img" alt="sad-smile">
                     </div>
@@ -928,11 +930,11 @@
               <div class="order__row">
                 <label class="order__block">
                   <div class="order__title">Имя</div>
-                  <input type="text" name="name" class="order__input">
+                  <input type="text" name="name" class="order__input" required>
                 </label>
                 <label class="order__block">
                   <div class="order__title">Телефон</div>
-                  <input type="text" name="phone" class="order__input">
+                  <input type="text" name="phone" class="order__input" required>
                 </label>
               </div>
               <div class="order__row">
@@ -969,22 +971,22 @@
               </div>
               <div class="order__row order__switch-controls">
                 <label class="switch-control__elem">
-                  <input type="radio" name="switch-control" class="switch-control__radio">
-                  <div class="switch-control__title">Потребуется сдача</div>
+                  <input type="radio" name="payment" value="Оплата наличными" class="switch-control__radio">
+                  <div class="switch-control__title">Оплата наличными</div>
                 </label>
                 <label class="switch-control__elem">
-                  <input type="radio" name="switch-control" class="switch-control__radio">
+                  <input type="radio" name="payment" value="Оплата по карте" class="switch-control__radio">
                   <div class="switch-control__title">Оплата по карте</div>
                 </label>
               </div>
               <div class="order__row order__check-controls">
                 <label class="check-control__elem">
-                  <input type="checkbox" id="order-checkbox" class="check-control__checkbox">
+                  <input type="checkbox" id="order-checkbox" name="toCall" class="check-control__checkbox">
                   <div class="check-control__title">Не перезванивать (отправить СМС)</div>
                 </label>
               </div>
               <div class="order__row order__btns">
-                <input type="submit" value="Заказать" class="order__btn btn  btn--green">
+                <input type="submit" value="Заказать" class="order__btn order__btn--sumbit btn  btn--green">
                 <input type="reset" value="Очистить" class="order__btn btn order__btn-reset">
               </div>
             </div>
@@ -1149,6 +1151,15 @@
         <a class="fixed-menu__link" data-scroll-to="8"></a>
       </li>
     </ul>
+  </div>
+  <div class="overlay">
+    <div class="overlay__container">
+      <div class="overlay__content">
+        <h4 class="overlay__text">Оператор свяжется с вами Оператор свяжется с вами Оператор свяжется с вами Оператор
+          свяжется с вами</h4>
+      </div>
+      <a class="overlay__closebtn closebtn"> </a>
+    </div>
   </div>
   <!-- <script src="https://www.youtube.com/iframe_api"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

@@ -1,5 +1,5 @@
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -8,6 +8,7 @@
   justify-content: center;
   align-items: center;
   z-index: 100;
+  background: #00000094;
   display: none;
 }
 
@@ -16,9 +17,35 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 50%;
+  max-width: 450px;
+  background-color: white;
+  border-radius: 10px;
+
+  @include phones {
+    width: 80%;
+  }
+}
+
+.overlay__content {
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+
+  h4{
+    font-size: 18px;
+  }
+  @include tablets {
+    padding: 40px 40px;
+  }
 }
 
 .overlay__closebtn {
   top: 3%;
   right: 4%;
+
+  &::before,
+  &::after {
+    background: #910000;
+  }
 }

@@ -5,25 +5,26 @@ export function onePageScroll() {
   let inScroll = false;
 
   function performTransition(sectionEq) {
-    if (!inScroll) {
-      inScroll = true;
+    let transitionDelay = 1500;
+    if (document.body.classList.contains('overlay--active')) return;
+    if (inScroll) return;
+    inScroll = true;
 
-      const position = sectionEq * -100;
-      display.style.transform = `translateY(${position}%)`
+    const position = sectionEq * -100;
+    display.style.transform = `translateY(${position}%)`
 
-      Array.from(sections).find(item => item.classList.contains('active')).classList.remove('active');
-      sections[sectionEq].classList.add('active');
-    }
+    Array.from(sections).find(item => item.classList.contains('active')).classList.remove('active');
+    sections[sectionEq].classList.add('active');
 
     const fixedMenu = document.querySelector('.fixed-menu');
     const darkMode = [1, 2, 3, 5, 6, 7, 8];
     darkMode.includes(+sectionEq) ? fixedMenu.classList.add('dark') : fixedMenu.classList.remove('dark');
+    fixedMenu.querySelector('.active').classList.remove('active');
+    fixedMenu.querySelector(`[data-scroll-to='${sectionEq}']`).closest('.fixed-menu__item').classList.add('active');
 
     setTimeout(() => {
-      fixedMenu.querySelector('.active').classList.remove('active');
-      fixedMenu.querySelector(`[data-scroll-to='${sectionEq}']`).closest('.fixed-menu__item').classList.add('active');
       inScroll = false;
-    }, 1500);
+    }, transitionDelay);
     // display.addEventListener("transitionend", (event) => {
     //   console.log('dooo')
     //   inScroll = false;
@@ -45,10 +46,8 @@ export function onePageScroll() {
     }
 
   }
-
   function onWheel(event) {
     if (event.ctrlKey) return;
-    // window.removeEventListener('wheel', onWheel);
     const deltaY = event.deltaY;
     if (!inScroll) {
       if (deltaY > 0) {
@@ -58,9 +57,6 @@ export function onePageScroll() {
         scrollSection('prev');
       }
     }
-    // setTimeout(() => {
-    //   window.addEventListener('wheel', onWheel);
-    // }, 1000);
   }
 
   window.addEventListener('wheel', onWheel);

@@ -3,7 +3,9 @@ export function myReviews() {
   const reviewDom = document.querySelector('.review');
   const reviewsDom = document.querySelector('.reviews');
   const formReview = document.querySelector('.form-review');
+  const reviewBtnNewReview = document.querySelector('.reviews-btn__new');
   let overlay;
+  let overlayMessage = document.querySelector('.overlay');
   let reviewJson = [{
     id: 0,
     title: 'Лучший перекус',
@@ -35,6 +37,12 @@ export function myReviews() {
     showReview(review);
     overlay.close();
     formReview.reset();
+    reviewBtnNewReview.closest('.reviews__item').style.display = 'none';
+    overlay = createOverlay(overlayMessage, `Спасибо за отзыв! 
+      Он будет размещен на сайте после проверки администратора. 
+      <br> (Будьте внимательны, Вы можете оставить только один отзыв. 
+      Если вы совершили ошибку или хотите изменить отзыв - перезагрузите страницу.)`)
+    overlay.open();
   });
 
   formReview.querySelector('input[type=file]').addEventListener('change', function (event) {
@@ -73,7 +81,9 @@ export function myReviews() {
     newReview.text = formReview.querySelector('#form-review__text').value;
     newReview.img = formReview.querySelector('img').src;
     newReview.id = reviewJson.length;
-    if (newReview.img < 100) newReview.img.src = './../img/reviews/camera.png';
+    if (newReview.img.length < 100) {
+      newReview.img = './../img/reviews/avatar.png';
+    }
     return newReview;
   }
 
@@ -97,20 +107,23 @@ export function myReviews() {
     img.src = review.img;
   }
 
-  const reviewBtnNewReview = document.querySelector('.reviews-btn__new');
+
 
   reviewBtnNewReview.addEventListener('click', function (event) {
     event.preventDefault();
-    console.log('cl')
-    const template = event.target.closest('section').querySelector('.overlay')
+    const template = event.target.closest('section').querySelector('.overlay-review')
     if (!template) return;
     overlay = createOverlay(template);
     overlay.open();
   });
 
-  function createOverlay(template) {
+  function createOverlay(template, message) {
     const overlay = template;
     const closeBtn = template.querySelector('.closebtn');
+    if (message) {
+      let overlayMessage = overlay.querySelector('.overlay__text') || null;
+      if (overlayMessage) overlayMessage.innerHTML = message;
+    }
 
     overlay.addEventListener('click', (event) => {
       if (event.target == overlay) closeBtn.click();
@@ -119,6 +132,7 @@ export function myReviews() {
     closeBtn.addEventListener('click', (event) => {
       event.preventDefault();
       document.body.style.overflow = '';
+      document.body.classList.remove('overlay--active');
       overlay.style.display = 'none';
     })
 
@@ -126,6 +140,7 @@ export function myReviews() {
       open() {
         overlay.style.display = 'flex';
         document.body.style.overflow = 'hidden';
+        document.body.classList.add('overlay--active');
       },
       close() {
         closeBtn.click();
