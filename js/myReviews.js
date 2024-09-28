@@ -81,9 +81,6 @@ export function myReviews() {
     newReview.text = formReview.querySelector('#form-review__text').value;
     newReview.img = formReview.querySelector('img').src;
     newReview.id = reviewJson.length;
-    if (newReview.img.length < 100) {
-      newReview.img = './../img/reviews/avatar.png';
-    }
     return newReview;
   }
 
