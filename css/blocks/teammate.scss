@@ -5,14 +5,15 @@
   max-width: 240px;
   width: 100%;
   height: 100%;
-  @include tablets{
+
+  @include tablets {
     height: 30px;
   }
 }
 
 .teammate__img-wrapper {
   margin-bottom: rem(21px);
-  
+
   @include tablets {
     display: none;
     margin-bottom: 4px;
@@ -56,9 +57,13 @@
 
 .teammate--active {
 
-  @include tablets{
+  @include tablets {
     height: 380px;
-    transition: height 0.4s;
+    transition: height 0.8s;
+
+    .teammate__img-wrapper {
+      height: 100%;
+    }
   }
 
   .teammate__name {
@@ -82,8 +87,8 @@
     display: block;
   }
 
+
   .teammate__img-wrapper {
-    height: 100%;
     display: block;
   }
 }

@@ -1826,9 +1826,11 @@ img {
 
 .team__item {
   width: 24%;
+  min-height: 450px;
 }
 @media screen and (max-width: 768px) {
   .team__item {
+    min-height: initial;
     margin-bottom: 2%;
     width: 100%;
     display: -webkit-box;
@@ -1938,8 +1940,11 @@ img {
 @media screen and (max-width: 768px) {
   .teammate--active {
     height: 380px;
-    -webkit-transition: height 0.4s;
-    transition: height 0.4s;
+    -webkit-transition: height 0.8s;
+    transition: height 0.8s;
+  }
+  .teammate--active .teammate__img-wrapper {
+    height: 100%;
   }
 }
 .teammate--active .teammate__name::before {
@@ -1957,7 +1962,6 @@ img {
   display: block;
 }
 .teammate--active .teammate__img-wrapper {
-  height: 100%;
   display: block;
 }
 
@@ -2176,9 +2180,11 @@ img {
 .reviews-section__content {
   margin-bottom: 1.5%;
   width: 100%;
+  min-height: 350px;
 }
 @media screen and (max-width: 768px) {
   .reviews-section__content {
+    min-height: initial;
     height: 65%;
   }
 }

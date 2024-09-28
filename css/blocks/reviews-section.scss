@@ -16,8 +16,10 @@
 .reviews-section__content {
   margin-bottom: 1.5%;
   width: 100%;
+  min-height: 350px;
 
   @include tablets {
+    min-height: initial;
     height: 65%;
   }
 }
