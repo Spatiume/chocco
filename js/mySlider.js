@@ -7,6 +7,7 @@ export function mySlider() {
   slider.addEventListener('click', function (event) {
 
     if (!event.target.closest('a')) return;
+    if (!event.target.closest('a').classList.contains('slidermenu__arrow')) return;
     event.preventDefault();
 
     let direction = '';
