@@ -975,7 +975,7 @@ img {
   position: absolute;
   bottom: 0%;
   z-index: -10;
-  right: -9%;
+  right: -50%;
   bottom: 0%;
   max-height: inherit;
   height: 100%;
@@ -984,6 +984,21 @@ img {
   .hero__right-decoration .uzor {
     bottom: 41%;
     height: 68%;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .hero__right-decoration .uzor {
+    right: -35%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .hero__right-decoration .uzor {
+    right: -25%;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .hero__right-decoration .uzor {
+    right: -9%;
   }
 }
 
